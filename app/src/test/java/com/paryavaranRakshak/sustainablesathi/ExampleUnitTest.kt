@@ -1,4 +1,4 @@
-package com.example.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi
 
 import org.junit.Test
 
