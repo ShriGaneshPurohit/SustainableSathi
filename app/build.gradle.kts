@@ -38,6 +38,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -66,4 +67,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+    //SDP & SSP-auto sizing
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+    runtimeOnly("com.intuit.ssp:ssp-android:1.1.0")
 }
