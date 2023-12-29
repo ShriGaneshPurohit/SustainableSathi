@@ -91,10 +91,10 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
                 // Save onboarding status and login type in SharedPreferences
+                Toast.makeText(this,"Successfully logged in",Toast.LENGTH_SHORT).show()
                 exit()
             } else {
                 Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-                exit()
             }
         }
     }
