@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -74,4 +75,9 @@ dependencies {
     //SDP & SSP-auto sizing
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     runtimeOnly("com.intuit.ssp:ssp-android:1.1.0")
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
 }

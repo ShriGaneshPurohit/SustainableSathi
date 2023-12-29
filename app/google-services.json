@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "555280740786",
+    "project_id": "sustainable-sathi",
+    "storage_bucket": "sustainable-sathi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555280740786:android:600885f7f70cf480ee34ab",
+        "android_client_info": {
+          "package_name": "com.paryavaranRakshak.sustainablesathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555280740786-frt5i05qi0c6ge1bps2tqqasnhfmoaiv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paryavaranRakshak.sustainablesathi",
+            "certificate_hash": "d00e59af412d761221b96b619f769f642459a17a"
+          }
+        },
+        {
+          "client_id": "555280740786-b4274f5us6jcpsegv73q7hsnhohdt9ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBberokXbfSK2HTVthQfa7Q56y-gz_p1hE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555280740786-b4274f5us6jcpsegv73q7hsnhohdt9ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
