@@ -73,7 +73,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/et_sellerAge"
+        android:id="@+id/et_age"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
         android:hint="Age"
@@ -97,12 +97,12 @@
         android:layout_height="wrap_content"
         android:hint="GSTN"
         android:inputType="text"
+        android:layout_marginTop="@dimen/_10sdp"
         android:visibility="gone"
-        android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_profile">
+        app:layout_constraintTop_toBottomOf="@+id/sp_accountType">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
