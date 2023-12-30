@@ -7,35 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:555280740786:android:075234678a11e8caee34ab",
-        "android_client_info": {
-          "package_name": "com.example.sustainablesathi"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "555280740786-b4274f5us6jcpsegv73q7hsnhohdt9ft.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBberokXbfSK2HTVthQfa7Q56y-gz_p1hE"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "555280740786-b4274f5us6jcpsegv73q7hsnhohdt9ft.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:555280740786:android:600885f7f70cf480ee34ab",
         "android_client_info": {
           "package_name": "com.paryavaranRakshak.sustainablesathi"
