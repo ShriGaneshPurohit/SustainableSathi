@@ -81,6 +81,16 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
 
+    //google auth
     implementation("com.google.android.gms:play-services-auth:20.7.0")
+
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Image loading library Glider
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    //image blur
+    implementation("jp.wasabeef:glide-transformations:4.3.0")
 
 }

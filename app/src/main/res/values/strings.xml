@@ -1,4 +1,14 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Sustainable Sathi</string>
+
+    <!-- Profile Registration Activity-->
     <string name="complete_your_profile">Complete Your Profile</string>
+
+    <!-- Account Types-->
+    <string-array name="account_types">
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+
 </resources>

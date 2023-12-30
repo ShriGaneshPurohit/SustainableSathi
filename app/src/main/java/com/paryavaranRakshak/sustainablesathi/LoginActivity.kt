@@ -91,7 +91,6 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener {
             if (it.isSuccessful) {
                 // Save onboarding status and login type in SharedPreferences
-                Toast.makeText(this,"Successfully logged in",Toast.LENGTH_SHORT).show()
                 exit()
             } else {
                 Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -101,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun exit() {
         progressDialog.dismiss()
-        val intent: Intent = Intent(this, MainActivity::class.java)
+        val intent: Intent = Intent(this, ProfileRegistrationActivity::class.java)
         startActivity(intent)
         finish()
     }
