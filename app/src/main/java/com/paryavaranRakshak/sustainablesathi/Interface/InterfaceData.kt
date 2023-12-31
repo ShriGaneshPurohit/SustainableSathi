@@ -13,6 +13,19 @@ interface InterfaceData {
     @POST("save-profile-api.php")
     fun saveSellerProfile(@Field("uid") uid: String,
                           @Field("name") name: String,
+                          @Field("age") age: String,
+                          @Field("email") email: String,
+                          @Field("contactNumber") contactNumber: String,
+                          @Field("address") address: String,
+                          @Field("city") city: String,
+                          @Field("state") state: String): Call<LoginModel>
+
+    //Save buyer profile Api
+    @FormUrlEncoded
+    @POST("save-profile-api.php")
+    fun saveBuyerProfile(@Field("uid") uid: String,
+                          @Field("name") name: String,
+                          @Field("gstn") gstn: String,
                           @Field("email") email: String,
                           @Field("contactNumber") contactNumber: String,
                           @Field("address") address: String,

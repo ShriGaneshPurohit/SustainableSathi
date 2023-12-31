@@ -1,5 +1,6 @@
 package com.paryavaranRakshak.sustainablesathi
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -13,8 +14,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityProfileRegistrationBinding
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
+import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import retrofit2.Call
 import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -29,10 +32,19 @@ class ProfileRegistrationActivity : AppCompatActivity() {
     //Account selected 0->buyer, 1->seller, 2->not selected yet
     private var accountSelected: Int = 2
 
+    //progress dialog
+    private lateinit var pd: ProgressDialog
+
+    //shared pref
+    private lateinit var sharedPreferencesHelper: LoginSharedPreferenceHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Initialize SharedPreferencesHelper
+        sharedPreferencesHelper = LoginSharedPreferenceHelper(this)
 
         //user auth data
         auth = FirebaseAuth.getInstance()
@@ -55,6 +67,11 @@ class ProfileRegistrationActivity : AppCompatActivity() {
             binding.tvEmail.text = currentUser.email
 
         }
+
+        //progress dialog
+        pd = ProgressDialog(this)
+        pd.setMessage("Processing...")
+        pd.setCancelable(false)
 
         //Setting up account type
         val accountsTypes = resources.getStringArray(R.array.account_types)
@@ -80,6 +97,7 @@ class ProfileRegistrationActivity : AppCompatActivity() {
 
     //Getting Data from edit texts
     private fun getData(uid: String, name: String, email: String) {
+        pd.show()
         val contactNumber = binding.etContact.text.toString()
         val address = binding.etAddress.text.toString()
         val city = binding.etCity.text.toString()
@@ -100,9 +118,37 @@ class ProfileRegistrationActivity : AppCompatActivity() {
         }
     }
 
-    //Register Buyer
     private fun registerBuyer(uid: String, name: String, email: String, gstn: String, contactNumber: String, address: String, city: String, state: String) {
-        TODO("Not yet implemented")
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://sustainable-sathi.000webhostapp.com/buyer/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val service = retrofit.create(InterfaceData::class.java)
+
+        val call = service.saveBuyerProfile(uid, name, gstn, email, contactNumber, address, city, state)
+
+        call.enqueue(object : Callback<LoginModel> {
+            override fun onResponse(call: Call<LoginModel>, response: Response<LoginModel>) {
+                if (response.isSuccessful) {
+                    Toast.makeText(this@ProfileRegistrationActivity, "$name welcome 👋👋!!", Toast.LENGTH_SHORT).show()
+                    // Save status and user type in SharedPreferences
+                    sharedPreferencesHelper.setLoginStatus("completed")
+                    sharedPreferencesHelper.setUserType("buyer")
+                    sharedPreferencesHelper.setUid(uid)
+                    pd.dismiss()
+                    startActivity(Intent(this@ProfileRegistrationActivity, MainActivity::class.java))
+                } else {
+                    // Handle unsuccessful response
+                    handleError()
+                }
+            }
+
+            override fun onFailure(call: Call<LoginModel>, t: Throwable) {
+                // Handle network failure
+                handleError()
+            }
+        })
     }
 
     //Register Seller
@@ -113,24 +159,32 @@ class ProfileRegistrationActivity : AppCompatActivity() {
             .build()
             .create(InterfaceData::class.java)
 
-        val call = retrofit.saveSellerProfile(uid,name,email,contactNumber,address,city,state)
+        val call = retrofit.saveSellerProfile(uid,name,age,email,contactNumber,address,city,state)
 
         call.enqueue(object : Callback<LoginModel> {
             override fun onResponse(call: Call<LoginModel>, response: retrofit2.Response<LoginModel>) {
                 if (response.isSuccessful) {
                     Toast.makeText(this@ProfileRegistrationActivity,"$name welcome 👋👋!!",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@ProfileRegistrationActivity,MainActivity::class.java))
+                    // Save status and user type in SharedPreferences
+                    sharedPreferencesHelper.setLoginStatus("completed")
+                    sharedPreferencesHelper.setUserType("seller")
+                    sharedPreferencesHelper.setUid(uid)
+                    pd.dismiss()
+                    startActivity(Intent(this@ProfileRegistrationActivity,SellerDashboardActivity::class.java))
                 } else {
-                    Toast.makeText(this@ProfileRegistrationActivity,"Something went wrong..",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@ProfileRegistrationActivity,MainActivity::class.java))
+                    handleError()
                 }
             }
 
             override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                Toast.makeText(this@ProfileRegistrationActivity,"Something went wrong..",Toast.LENGTH_SHORT).show()
-                println(t.message)
+               handleError()
             }
         })
+    }
+
+    private fun handleError() {
+        Toast.makeText(this@ProfileRegistrationActivity, "Something went wrong..", Toast.LENGTH_SHORT).show()
+        pd.dismiss()
     }
 
 }
