@@ -34,17 +34,16 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="@dimen/_10sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="115dp"
                     android:background="#9DC08B"
-                    android:padding="@dimen/_10sdp">
+                    android:padding="@dimen/_20sdp"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity=""
                         android:text="@string/e_waste_nfacility_locator"
                         android:textColor="@color/white"
@@ -52,14 +51,14 @@
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="173dp"
-                        android:layout_height="133dp"
-                        android:layout_alignParentEnd="true"
-                        android:src="@drawable/ic_locator">
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:src="@drawable/ic_locator"
+                        android:layout_gravity="center_vertical">
 
                     </ImageView>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -71,31 +70,31 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="@dimen/_10sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="117dp"
                     android:background="#609966"
-                    android:padding="@dimen/_10sdp">
+                    android:padding="@dimen/_20sdp"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="115dp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:text="Sell\nE-Waste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sell E-Waste"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="173dp"
-                        android:layout_height="133dp"
-                        android:layout_alignParentEnd="true"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
                         android:src="@drawable/ic_trash">
 
                     </ImageView>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -107,32 +106,30 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="@dimen/_10sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#86A789"
-                    android:padding="@dimen/_10sdp">
+                    android:padding="@dimen/_20sdp"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="Knowledge\nHub"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="169dp"
-                        android:layout_height="94dp"
-                        android:layout_alignParentEnd="true"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_35sdp"
                         android:src="@drawable/ic_knowledge_hub">
 
                     </ImageView>
 
-                </RelativeLayout>
-
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -144,32 +141,31 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="@dimen/_10sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#40513B"
-                    android:padding="@dimen/_10sdp">
+                    android:padding="@dimen/_20sdp"
+                    android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
                         android:text="Legal\nCompliance"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="163dp"
-                        android:layout_height="93dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="-4dp"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_legal_compliance">
 
                     </ImageView>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 

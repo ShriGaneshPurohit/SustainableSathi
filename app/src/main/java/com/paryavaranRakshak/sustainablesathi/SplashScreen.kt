@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(binding.root)
         // Splash Screen
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, Seller_DashBoard::class.java))
+            startActivity(Intent(this, SellerDashboardActivity::class.java))
             overridePendingTransition(R.anim.zoom_in, R.anim.static_animation)
             finishAffinity()
         }, 1000.toLong())
