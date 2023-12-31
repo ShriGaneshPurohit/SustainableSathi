@@ -93,4 +93,7 @@ dependencies {
     //image blur
     implementation("jp.wasabeef:glide-transformations:4.3.0")
 
+    //image picker
+    implementation("com.github.dhaval2404:imagepicker:2.1")
+
 }
