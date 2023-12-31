@@ -2,4 +2,10 @@
     <string name="app_name">Sustainable Sathi</string>
     <string name="complete_your_profile">Complete Your Profile</string>
     <string name="e_waste_nfacility_locator">E-Waste\nFacility Locator</string>
+
+    <string-array name="account_types">
+        <item>Buyer</item>
+        <item>Seller</item>
+    </string-array>
+
 </resources>
