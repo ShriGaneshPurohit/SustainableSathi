@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/_20sdp"
-    tools:context=".Seller_DashBoard">
+    tools:context=".SellerDashboardActivity">
 
     <ImageView
         android:layout_width="@dimen/_200sdp"
@@ -55,7 +55,7 @@
                         android:layout_width="173dp"
                         android:layout_height="133dp"
                         android:layout_alignParentEnd="true"
-                        android:src="@drawable/locator">
+                        android:src="@drawable/ic_locator">
 
                     </ImageView>
 
@@ -91,7 +91,7 @@
                         android:layout_width="173dp"
                         android:layout_height="133dp"
                         android:layout_alignParentEnd="true"
-                        android:src="@drawable/sellewaste">
+                        android:src="@drawable/ic_trash">
 
                     </ImageView>
 
@@ -127,7 +127,7 @@
                         android:layout_width="169dp"
                         android:layout_height="94dp"
                         android:layout_alignParentEnd="true"
-                        android:src="@drawable/legal_comp">
+                        android:src="@drawable/ic_knowledge_hub">
 
                     </ImageView>
 
@@ -165,7 +165,7 @@
                         android:layout_height="93dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="-4dp"
-                        android:src="@drawable/legal_comp">
+                        android:src="@drawable/ic_legal_compliance">
 
                     </ImageView>
 
