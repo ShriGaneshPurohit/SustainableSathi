@@ -1,208 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EDF1D6"
-    android:orientation="horizontal"
-    android:padding="20dp"
-    tools:context=".Seller_DashBoard"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/_20sdp"
+    android:paddingEnd="@dimen/_20sdp"
+    tools:context=".Seller_DashBoard">
 
-    >
+    <ImageView
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_app_banner" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="74dp"
-                android:layout_height="75dp"
-                android:src="@drawable/appIcon">
-
-            </ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:fontFamily="sans-serif-condensed"
-                android:text="@string/app_name"
-                android:textColor="#000"
-                android:textSize="@dimen/_30sdp"
-
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="@dimen/_10sdp">
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_eWasteLocator"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
-                android:background="#9DC08B"
-                android:padding="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="@dimen/_10sdp">
 
-                >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:gravity=""
-                    android:text="@string/e_waste_nfacility_locator"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="173dp"
-                    android:layout_height="133dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/locator">
-
-                </ImageView>
-
-            </RelativeLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="@dimen/_10sdp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="117dp"
-                android:background="#609966"
-                android:padding="@dimen/_10sdp"
-
-                >
-
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="115dp"
-                    android:layout_marginLeft="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:text="Sell\nE-Waste"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:background="#9DC08B"
+                    android:padding="@dimen/_10sdp">
 
-                <ImageView
-                    android:layout_width="173dp"
-                    android:layout_height="133dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/sellewaste">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity=""
+                        android:text="@string/e_waste_nfacility_locator"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-                </ImageView>
+                    <ImageView
+                        android:layout_width="173dp"
+                        android:layout_height="133dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/locator">
 
-            </RelativeLayout>
+                    </ImageView>
 
+                </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="@dimen/_10sdp">
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_sellEWaste"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#86A789"
-                android:padding="@dimen/_10sdp"
+                android:layout_height="115dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="@dimen/_10sdp">
 
-                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="117dp"
+                    android:background="#609966"
+                    android:padding="@dimen/_10sdp">
 
-                <TextView
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="115dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Sell\nE-Waste"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="173dp"
+                        android:layout_height="133dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/sellewaste">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_knowledgeHub"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="@dimen/_10sdp">
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:text="Knowledge\nHub"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:background="#86A789"
+                    android:padding="@dimen/_10sdp">
 
-                <ImageView
-                    android:layout_width="169dp"
-                    android:layout_height="94dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/legal_comp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Knowledge\nHub"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-                </ImageView>
+                    <ImageView
+                        android:layout_width="169dp"
+                        android:layout_height="94dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/legal_comp">
 
-            </RelativeLayout>
+                    </ImageView>
+
+                </RelativeLayout>
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:cardCornerRadius="15dp"
-            app:cardElevation="@dimen/_10sdp">
-
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_legalCompliance"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#40513B"
-                android:padding="@dimen/_10sdp"
+                android:layout_height="115dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="@dimen/_10sdp">
 
-                >
-
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_10sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:text="Legal\nCompiance"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:background="#40513B"
+                    android:padding="@dimen/_10sdp">
 
-                <ImageView
-                    android:layout_width="163dp"
-                    android:layout_height="93dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="-4dp"
-                    android:src="@drawable/legal_comp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text="Legal\nCompliance"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-                </ImageView>
+                    <ImageView
+                        android:layout_width="163dp"
+                        android:layout_height="93dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="-4dp"
+                        android:src="@drawable/legal_comp">
 
-            </RelativeLayout>
+                    </ImageView>
 
+                </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+        </LinearLayout>
 
+    </ScrollView>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>
