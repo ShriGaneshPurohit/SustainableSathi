@@ -80,6 +80,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-storage:20.3.0")
 
     //google auth
     implementation("com.google.android.gms:play-services-auth:20.7.0")
@@ -92,8 +93,5 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     //image blur
     implementation("jp.wasabeef:glide-transformations:4.3.0")
-
-    //image picker
-    implementation("io.ak1.pix:piximagepicker:1.6.3")
 
 }
