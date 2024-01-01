@@ -2,6 +2,7 @@ package com.paryavaranRakshak.sustainablesathi
 
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -27,8 +28,9 @@ class SellEWasteActivity : AppCompatActivity() {
 
         storageRef = FirebaseStorage.getInstance().reference.child("productsImg")
 
-        //binding.ivProduct.setOnClickListener{ resultLauncher.launch("image/*") }
+        binding.cvProductImg.setOnClickListener{ resultLauncher.launch("image/*") }
 
+        binding.btnUpload.setOnClickListener { uploadImageToFirebase("id488") }
 
     }
 
@@ -37,22 +39,28 @@ class SellEWasteActivity : AppCompatActivity() {
         ActivityResultContracts.GetContent()
     ) {
         imageUri = it
-        //binding.ivProduct.setImageURI(it)
+        binding.ivProductPlaceHolder.visibility = View.GONE
+        binding.ivProductImg.visibility = View.VISIBLE
+        binding.ivProductImg.setImageURI(it)
     }
 
     private fun uploadImageToFirebase(productId: String) {
         storageRef = storageRef.child(productId)
-        imageUri?.let {
-            storageRef.putFile(it).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    storageRef.downloadUrl.addOnSuccessListener {
-                        imageUri
+
+        imageUri?.let { uri ->
+            storageRef.putFile(uri)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        storageRef.downloadUrl.addOnSuccessListener { downloadUri ->
+                            imageUri = downloadUri
+                            println(imageUri)
+                        }
+                    } else {
+                        Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
-                } else {
-                    Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
                 }
-            }
         }
     }
+
 
 }
