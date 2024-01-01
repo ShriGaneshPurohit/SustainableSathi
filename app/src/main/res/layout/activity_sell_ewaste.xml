@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/work_sans"
-                android:text="Sell an item"
+                android:text="Sell E-Waste"
                 android:textSize="@dimen/_22ssp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/_20sdp"/>
