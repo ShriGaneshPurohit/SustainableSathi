@@ -45,7 +45,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity=""
-                        android:text="@string/e_waste_nfacility_locator"
+                        android:text="E-waste \nFacility Locator"
                         android:textColor="@color/white"
                         android:textSize="25sp"
                         android:textStyle="bold" />

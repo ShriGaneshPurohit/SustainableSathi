@@ -32,4 +32,19 @@ interface InterfaceData {
                           @Field("city") city: String,
                           @Field("state") state: String): Call<LoginModel>
 
+    //sell e-waste
+    @FormUrlEncoded
+    @POST("sell-e-waste-api.php") // Replace with your actual API endpoint
+    fun uploadProduct(
+        @Field("name") name: String,
+        @Field("imageLink") imageLink: String,
+        @Field("category") category: String,
+        @Field("description") description: String,
+        @Field("quantity") quantity: Int,
+        @Field("price") price: Int,
+        @Field("sellerUID") sellerUID: String,
+        @Field("city") city: String,
+        @Field("state") state: String
+    ): Call<Void>
+
 }
