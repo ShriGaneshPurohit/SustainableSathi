@@ -46,6 +46,7 @@
             android:padding="@dimen/_5sdp">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_stage1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -88,6 +89,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_stage2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -133,6 +135,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_stage3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -178,6 +181,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cv_stage4"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_20sdp"
