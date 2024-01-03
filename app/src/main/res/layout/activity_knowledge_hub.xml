@@ -52,39 +52,31 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 app:cardCornerRadius="@dimen/_20sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#9DC08B">
+                    android:background="#9DC08B"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_20sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_marginBottom="17dp"
-
-
                         android:fontFamily="@font/work_sans"
-                        android:text="What is\nE-waste"
+                        android:text="What is E-waste"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_20sdp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
 
                     <ImageView
-                        android:layout_width="98dp"
-                        android:layout_height="97dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="33dp"
-                        android:layout_marginRight="31dp"
-                        android:src="@drawable/knowledgehub" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/knowledgehub"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_10sdp"/>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -95,42 +87,30 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 app:cardCornerRadius="@dimen/_20sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#609966"
-
-
-                    >
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_20sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_marginBottom="17dp"
-
-
                         android:fontFamily="@font/work_sans"
-                        android:text="Recycle of\nE-waste"
+                        android:text="How To Recycle \nof E-waste"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_20sdp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
 
                     <ImageView
-                        android:layout_width="88dp"
-                        android:layout_height="117dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="31dp"
-                        android:src="@drawable/ic_knowledgehub_recycle" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_knowledgehub_recycle"
+                        android:layout_marginStart="@dimen/_10sdp"/>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -141,42 +121,31 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 app:cardCornerRadius="@dimen/_20sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#86A789"
-
-
-                    >
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_20sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="35dp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_marginBottom="17dp"
-
-
                         android:fontFamily="@font/work_sans"
-                        android:text="Disposal of\nE-waste"
+                        android:text="Disposal of \nE-waste"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_20sdp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
 
                     <ImageView
-                        android:layout_width="74dp"
-                        android:layout_height="87dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="29dp"
-                        android:layout_marginRight="31dp"
-                        android:src="@drawable/ic_knowledgehub_disposal" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_knowledgehub_disposal"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_40sdp"/>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -187,42 +156,31 @@
                 android:layout_marginTop="@dimen/_20sdp"
                 app:cardCornerRadius="@dimen/_20sdp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#40513B"
-
-
-                    >
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_20sdp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginStart="26dp"
-                        android:layout_marginTop="22dp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_marginBottom="30dp"
-
-
                         android:fontFamily="@font/work_sans"
                         android:text="Problems Caused\nby E-waste"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_20sdp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
 
                     <ImageView
-                        android:layout_width="81dp"
-                        android:layout_height="94dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="33dp"
-                        android:layout_marginRight="31dp"
-                        android:src="@drawable/ic_knowledgehub_provlems" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_knowledgehub_provlems"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_10sdp"/>
 
-                </RelativeLayout>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 

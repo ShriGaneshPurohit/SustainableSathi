@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".YoutubePlayerActivity"
-    android:id="@+id/rootView">
+    android:id="@+id/rootView"
+    android:background="#EDF1D6">
 
     <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:id="@+id/ytPlayer"
