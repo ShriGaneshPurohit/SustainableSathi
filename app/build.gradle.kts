@@ -94,4 +94,7 @@ dependencies {
     //image blur
     implementation("jp.wasabeef:glide-transformations:4.3.0")
 
+    //yt player
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
+
 }

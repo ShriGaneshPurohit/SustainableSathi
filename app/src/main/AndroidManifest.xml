@@ -17,6 +17,11 @@
         android:theme="@style/Theme.SustainableSathi"
         tools:targetApi="31">
         <activity
+            android:name=".YoutubePlayerActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout" />
+
+        <activity
             android:name=".KnowledgeHubActivity"
             android:exported="false" />
         <activity
