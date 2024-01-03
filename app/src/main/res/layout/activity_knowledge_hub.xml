@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF1E4"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="#EDF1D6"
     android:padding="@dimen/_10sdp">
 
     <RelativeLayout
-        android:id="@+id/titleBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
+
         android:elevation="@dimen/_70sdp">
 
         <ImageView
+
             android:layout_width="@dimen/_50sdp"
             android:layout_height="@dimen/_50sdp"
             android:src="@drawable/ic_knowledge_hub" />
@@ -28,13 +29,13 @@
             android:text="Knowledge Hub"
             android:textAlignment="center"
             android:textSize="@dimen/_25sdp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
 
+            />
     </RelativeLayout>
 
 
     <ScrollView
-        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -54,7 +55,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/teal_200">
+                    android:background="#9DC08B">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -69,19 +70,19 @@
 
 
                         android:fontFamily="@font/work_sans"
-                        android:text="Link -1"
+                        android:text="What is\nE-waste"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_20sdp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="73dp"
+                        android:layout_width="98dp"
+                        android:layout_height="97dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="33dp"
                         android:layout_marginRight="31dp"
-                        android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+                        android:src="@drawable/knowledgehub" />
 
                 </RelativeLayout>
 
@@ -97,7 +98,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/teal_200"
+                    android:background="#609966"
 
 
                     >
@@ -115,19 +116,19 @@
 
 
                         android:fontFamily="@font/work_sans"
-                        android:text="Link -2"
+                        android:text="Recycle of\nE-waste"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_20sdp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="73dp"
+                        android:layout_width="88dp"
+                        android:layout_height="117dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="33dp"
+                        android:layout_marginTop="20dp"
                         android:layout_marginRight="31dp"
-                        android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+                        android:src="@drawable/ic_knowledgehub_recycle" />
 
                 </RelativeLayout>
 
@@ -143,7 +144,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/teal_200"
+                    android:background="#86A789"
 
 
                     >
@@ -161,19 +162,19 @@
 
 
                         android:fontFamily="@font/work_sans"
-                        android:text="Link -3"
+                        android:text="Disposal of\nE-waste"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_20sdp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="73dp"
+                        android:layout_width="74dp"
+                        android:layout_height="87dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
-                        android:layout_marginTop="33dp"
+                        android:layout_marginTop="29dp"
                         android:layout_marginRight="31dp"
-                        android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+                        android:src="@drawable/ic_knowledgehub_disposal" />
 
                 </RelativeLayout>
 
@@ -189,7 +190,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/teal_200"
+                    android:background="#40513B"
 
 
                     >
@@ -201,25 +202,25 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="26dp"
-                        android:layout_marginTop="35dp"
+                        android:layout_marginTop="22dp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:layout_marginBottom="17dp"
+                        android:layout_marginBottom="30dp"
 
 
                         android:fontFamily="@font/work_sans"
-                        android:text="Link -4"
+                        android:text="Problems Caused\nby E-waste"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_25sdp"
+                        android:textSize="@dimen/_20sdp"
                         android:textStyle="bold" />
 
                     <ImageView
-                        android:layout_width="68dp"
-                        android:layout_height="73dp"
+                        android:layout_width="81dp"
+                        android:layout_height="94dp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
                         android:layout_marginTop="33dp"
                         android:layout_marginRight="31dp"
-                        android:src="@drawable/common_google_signin_btn_icon_dark_normal" />
+                        android:src="@drawable/ic_knowledgehub_provlems" />
 
                 </RelativeLayout>
 
