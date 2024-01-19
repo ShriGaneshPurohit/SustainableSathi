@@ -4,78 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/_100sdp"
-    android:layout_margin="@dimen/_10sdp"
-    android:padding="@dimen/_10sdp">
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/scheme_1">
+        android:background="@color/scheme_1"
+        android:padding="@dimen/_5sdp">
 
         <TextView
+            android:id="@+id/tv_facilityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Facility Name"
-            android:textSize="@dimen/_25sdp"
+            android:textSize="@dimen/_22sdp"
             android:textStyle="bold"
-
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.122"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.183" />
 
         <TextView
+            android:id="@+id/tv_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_distance"
             android:text="{Distance}"
-
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.077"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.754">
-
-
-        </TextView>
+            app:layout_constraintTop_toBottomOf="@+id/tv_facilityName"/>
 
         <Button
-            android:layout_width="@dimen/_100sdp"
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.937"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.195"
-            android:text="Navigate"
+            android:backgroundTint="@color/scheme_4"
             android:drawableLeft="@drawable/ic_navigate"
             android:drawableTint="@color/white"
-            android:textSize="@dimen/_10sdp"
-            android:backgroundTint="@color/scheme_4">
-
-
-        </Button>
-
-        <Button
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="wrap_content"
+            android:text="Navigate"
+            android:textSize="@dimen/_11sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.937"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.78"
-            android:text="Contact"
+            app:layout_constraintVertical_bias="0.195" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/scheme_2"
             android:drawableLeft="@drawable/ic_contact"
             android:drawableTint="@color/white"
-            android:backgroundTint="@color/scheme_2">
-
-
-        </Button>
+            android:text="Contact"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button"
+            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/button"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

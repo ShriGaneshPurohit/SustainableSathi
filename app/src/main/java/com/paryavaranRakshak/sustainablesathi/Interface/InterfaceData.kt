@@ -1,10 +1,13 @@
 package com.paryavaranRakshak.sustainablesathi.Interface
 
+import com.paryavaranRakshak.sustainablesathi.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 interface InterfaceData {
 
@@ -46,5 +49,10 @@ interface InterfaceData {
         @Field("city") city: String,
         @Field("state") state: String
     ): Call<Void>
+
+    //Get facility Api
+    @GET("facility-locator-api.php")
+    fun getFacility(@Query("uid") uid: String): Call<List<LocatorFacilityModel>>
+
 
 }
