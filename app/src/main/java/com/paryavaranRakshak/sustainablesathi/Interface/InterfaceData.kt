@@ -2,6 +2,7 @@ package com.paryavaranRakshak.sustainablesathi.Interface
 
 import com.paryavaranRakshak.sustainablesathi.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
+import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -55,5 +56,8 @@ interface InterfaceData {
     @GET("facility-locator.php")
     fun getFacility(@Query("uid") uid: String): Call<List<LocatorFacilityModel>>
 
+    //Get Near you product Api
+    @GET("near-you-product.php")
+    fun getNearByProducts(@Query("uid") uid: String): Call<List<ProductsModel>>
 
 }
