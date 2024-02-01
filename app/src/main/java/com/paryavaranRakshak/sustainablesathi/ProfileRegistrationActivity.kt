@@ -120,7 +120,7 @@ class ProfileRegistrationActivity : AppCompatActivity() {
 
     private fun registerBuyer(uid: String, name: String, email: String, gstn: String, contactNumber: String, address: String, city: String, state: String) {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://sustainable-sathi.000webhostapp.com/buyer/")
+            .baseUrl("https://sustainable-sathi.tech/backend/api/buyer/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -154,7 +154,7 @@ class ProfileRegistrationActivity : AppCompatActivity() {
     //Register Seller
     private fun registerSeller(uid: String, name: String, email: String, age: String, contactNumber: String, address: String, city: String, state: String) {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://sustainable-sathi.000webhostapp.com/seller/")
+            .baseUrl("https://sustainable-sathi.tech/backend/api/seller/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(InterfaceData::class.java)

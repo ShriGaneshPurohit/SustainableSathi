@@ -13,7 +13,7 @@ interface InterfaceData {
 
     //Save seller profile Api
     @FormUrlEncoded
-    @POST("save-profile-api.php")
+    @POST("save-profile.php")
     fun saveSellerProfile(@Field("uid") uid: String,
                           @Field("name") name: String,
                           @Field("age") age: String,
@@ -25,7 +25,7 @@ interface InterfaceData {
 
     //Save buyer profile Api
     @FormUrlEncoded
-    @POST("save-profile-api.php")
+    @POST("save-profile.php")
     fun saveBuyerProfile(@Field("uid") uid: String,
                           @Field("name") name: String,
                           @Field("gstn") gstn: String,
@@ -37,21 +37,22 @@ interface InterfaceData {
 
     //sell e-waste
     @FormUrlEncoded
-    @POST("sell-e-waste-api.php") // Replace with your actual API endpoint
+    @POST("sell-product.php") // Replace with your actual API endpoint
     fun uploadProduct(
         @Field("name") name: String,
         @Field("imageLink") imageLink: String,
         @Field("category") category: String,
+        @Field("subCategory") subCategory: String,
         @Field("description") description: String,
         @Field("quantity") quantity: Int,
-        @Field("price") price: Int,
+        @Field("price") price: Float,
         @Field("sellerUID") sellerUID: String,
         @Field("city") city: String,
         @Field("state") state: String
     ): Call<Void>
 
     //Get facility Api
-    @GET("facility-locator-api.php")
+    @GET("facility-locator.php")
     fun getFacility(@Query("uid") uid: String): Call<List<LocatorFacilityModel>>
 
 

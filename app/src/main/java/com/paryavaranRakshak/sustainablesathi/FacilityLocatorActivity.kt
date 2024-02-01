@@ -23,7 +23,7 @@ class FacilityLocatorActivity : AppCompatActivity() {
     private lateinit var Adapter: NearestFacilityAdapter
 
     //Base URL for the API
-    private val baseApi = "https://sustainable-sathi.000webhostapp.com/seller/"
+    private val baseApi = "https://sustainable-sathi.tech/backend/api/seller/"
 
     //shared pref
     private lateinit var sharedPreferencesHelper: LoginSharedPreferenceHelper

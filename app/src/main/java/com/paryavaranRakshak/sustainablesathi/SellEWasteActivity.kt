@@ -34,6 +34,7 @@ class SellEWasteActivity : AppCompatActivity() {
 
     //selected category
     private var category: String? = null
+    private var subCategory: String? = null
 
     //progress dialog
     private lateinit var pd: ProgressDialog
@@ -55,11 +56,23 @@ class SellEWasteActivity : AppCompatActivity() {
         val categories = resources.getStringArray(R.array.eWaste_category)
         val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, categories)
         binding.etCategory.adapter = arrayAdapter
+        binding.etSubCategory.adapter = arrayAdapter
 
         // Spinner item selection listener
         binding.etCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 category = categories[position]
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                // Handle the case where nothing is selected, if needed
+            }
+        }
+
+        // Spinner item selection listener
+        binding.etSubCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                subCategory = categories[position]
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -108,8 +121,12 @@ class SellEWasteActivity : AppCompatActivity() {
                         Toast.makeText(this, task.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+        } ?: run {
+            pd.dismiss()
+            Toast.makeText(this, "Image URI is null", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     private fun getData(){
         pd.setTitle("Uploading product data...")
@@ -127,13 +144,13 @@ class SellEWasteActivity : AppCompatActivity() {
     private fun uploadProduct(name: String, description: String, quantity: Int, price: Int, city: String, state: String) {
         // Initialize Retrofit
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://sustainable-sathi.000webhostapp.com/seller/")
+            .baseUrl("https://sustainable-sathi.tech/backend/api/seller/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         val service = retrofit.create(InterfaceData::class.java)
 
-        val call = service.uploadProduct(name, imageUri.toString(), category!!, description, quantity, price, sharedPreferencesHelper.getUid()!!, city, state)
+        val call = service.uploadProduct(name, imageUri.toString(), category!!, subCategory!!, description, quantity, price, sharedPreferencesHelper.getUid()!!, city, state)
 
         call.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {

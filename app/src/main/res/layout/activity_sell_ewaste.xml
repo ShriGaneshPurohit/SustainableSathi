@@ -107,6 +107,24 @@
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
             <Spinner
+                android:id="@+id/et_sub_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txtview_rounded_corners"
+                android:spinnerMode="dropdown"
+                tools:listitem="@layout/dropdown_item" />
+
+            <TextView
+                android:id="@+id/tv_sub_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/work_sans"
+                android:text="Sub Category"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+            <Spinner
                 android:id="@+id/et_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
