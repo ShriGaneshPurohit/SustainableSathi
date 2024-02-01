@@ -137,7 +137,7 @@ class ProfileRegistrationActivity : AppCompatActivity() {
                     sharedPreferencesHelper.setUserType("buyer")
                     sharedPreferencesHelper.setUid(uid)
                     pd.dismiss()
-                    startActivity(Intent(this@ProfileRegistrationActivity, MainActivity::class.java))
+                    startActivity(Intent(this@ProfileRegistrationActivity, BuyerDashboardActivity::class.java))
                 } else {
                     // Handle unsuccessful response
                     handleError()

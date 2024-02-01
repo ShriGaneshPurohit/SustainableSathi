@@ -43,7 +43,7 @@ class SplashScreen : AppCompatActivity() {
             }
         } else {
             Handler(Looper.getMainLooper()).postDelayed({
-                startActivity(Intent(this, LoginActivity::class.java))
+                startActivity(Intent(this, BuyerDashboardActivity::class.java))
                 overridePendingTransition(R.anim.zoom_in, R.anim.static_animation)
                 finishAffinity()
             }, Splash_Time_Out.toLong())
@@ -54,7 +54,7 @@ class SplashScreen : AppCompatActivity() {
     private fun buyerLogin() {
         // Splash Screen
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BuyerDashboardActivity::class.java))
             overridePendingTransition(R.anim.zoom_in, R.anim.static_animation)
             finishAffinity()
         }, Splash_Time_Out.toLong())

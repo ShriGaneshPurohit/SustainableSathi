@@ -5,21 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CategoriesFragment"
-    android:layout_margin="@dimen/_10sdp"
+    android:padding="@dimen/_10sdp"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Categories"
-        android:textSize="@dimen/_25sdp"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif"
-        android:paddingBottom="@dimen/_20ssp" />
+        android:fontFamily="sans-serif" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
