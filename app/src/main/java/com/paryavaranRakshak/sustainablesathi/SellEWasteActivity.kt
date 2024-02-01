@@ -150,7 +150,7 @@ class SellEWasteActivity : AppCompatActivity() {
 
         val service = retrofit.create(InterfaceData::class.java)
 
-        val call = service.uploadProduct(name, imageUri.toString(), category!!, subCategory!!, description, quantity, price, sharedPreferencesHelper.getUid()!!, city, state)
+        val call = service.uploadProduct(name, imageUri.toString(), category!!, subCategory!!, description, quantity, price.toFloat(), sharedPreferencesHelper.getUid()!!, city, state)
 
         call.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
