@@ -9,8 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.paryavaranRakshak.sustainablesathi.ProductViewActivity
 import com.paryavaranRakshak.sustainablesathi.R
 import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
+import com.paryavaranRakshak.sustainablesathi.utils.ProductUtils
 
 class ProductAdapter(val context: Context, val list: List<ProductsModel>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 
@@ -40,14 +42,18 @@ class ProductAdapter(val context: Context, val list: List<ProductsModel>) : Recy
         val priceStr = "₹ ${list[position].price} /-"
         holder.price.text = priceStr
 
-        /*holder.image.setOnClickListener{
-            categoryWallpapersUtils.CATEGORY_ID = list[position].name
-            categoryWallpapersUtils.CATEGORY_SELECTED = list[position].name
+        // Set click listener for the item
+        holder.itemView.setOnClickListener {
+            // Pass the selected product details to the utils
+            ProductUtils.productName = list[position].name
+            ProductUtils.imageLink = list[position].image_link
+            ProductUtils.description = list[position].description
+            ProductUtils.quantity = list[position].quantity
+            ProductUtils.price = list[position].price
 
-            val showWallpapers = Intent(context, CategoryWallpapersActivity::class.java)
-
-            context.startActivity(showWallpapers)
-        }*/
+            val intent = Intent(context, ProductViewActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
 }

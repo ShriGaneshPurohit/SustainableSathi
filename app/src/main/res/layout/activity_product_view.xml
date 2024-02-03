@@ -14,10 +14,13 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="@dimen/_30ssp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:background="@drawable/arrow_back"/>
+
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Product Name"
@@ -29,10 +32,20 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:visibility="gone"/>
+
     <ImageView
+        android:id="@+id/iv_product"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
-        android:src="@drawable/ic_knowledge_hub"/>
+        android:src="@drawable/ic_knowledge_hub"
+        android:scaleType="centerCrop"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,6 +58,7 @@
             android:layout_margin="@dimen/_5sdp">
 
             <TextView
+                android:id="@+id/tv_productName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -54,11 +68,13 @@
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
             <TextView
+                android:id="@+id/tv_productDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
 
             <Button
+                android:id="@+id/btn_buy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/scheme_2"
