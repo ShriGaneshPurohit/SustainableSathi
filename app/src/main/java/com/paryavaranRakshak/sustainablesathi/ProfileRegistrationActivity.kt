@@ -157,7 +157,7 @@ class ProfileRegistrationActivity : AppCompatActivity() {
         val service = retrofit.create(InterfaceData::class.java)
 
         val call =
-            service.saveBuyerProfile(uid, name, gstn, email, contactNumber, address, city, state)
+            service.saveBuyerProfile(uid, name, gstn, email, contactNumber, address, city, state, latitude.toString(), longitude.toString())
 
         call.enqueue(object : Callback<LoginModel> {
             override fun onResponse(call: Call<LoginModel>, response: Response<LoginModel>) {

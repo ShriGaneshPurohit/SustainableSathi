@@ -1,5 +1,6 @@
 package com.paryavaranRakshak.sustainablesathi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -7,16 +8,21 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityBuyerDashboardBinding
+import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 
 class BuyerDashboardActivity : AppCompatActivity() {
 
     //view binding
     private lateinit var binding: ActivityBuyerDashboardBinding
 
+    private lateinit var loginHelper: LoginSharedPreferenceHelper
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBuyerDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        loginHelper = LoginSharedPreferenceHelper(this)
 
         val adapter = ViewPagerAdapter(this)
         binding.viewpager2.adapter = adapter
@@ -29,7 +35,19 @@ class BuyerDashboardActivity : AppCompatActivity() {
             }
         }.attach()
 
+        //logout
+        binding.textView2.setOnClickListener { logout() }
+
     }
+
+    private fun logout() {
+        loginHelper.setLoginStatus("pending")
+        loginHelper.setUid("none")
+        loginHelper.setUserType("none")
+        startActivity(Intent(this,SplashScreen::class.java))
+        finishAffinity()
+    }
+
 }
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :

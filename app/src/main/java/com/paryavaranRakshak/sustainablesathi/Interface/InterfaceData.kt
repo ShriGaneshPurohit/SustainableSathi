@@ -15,28 +15,34 @@ interface InterfaceData {
     //Save seller profile Api
     @FormUrlEncoded
     @POST("save-profile.php")
-    fun saveSellerProfile(@Field("uid") uid: String,
-                          @Field("name") name: String,
-                          @Field("age") age: String,
-                          @Field("email") email: String,
-                          @Field("contactNumber") contactNumber: String,
-                          @Field("address") address: String,
-                          @Field("city") city: String,
-                          @Field("state") state: String,
-                          @Field("latitude") latitude: String,
-                          @Field("longitude") longitude: String): Call<LoginModel>
+    fun saveSellerProfile(
+        @Field("uid") uid: String,
+        @Field("name") name: String,
+        @Field("age") age: String,
+        @Field("email") email: String,
+        @Field("contactNumber") contactNumber: String,
+        @Field("address") address: String,
+        @Field("city") city: String,
+        @Field("state") state: String,
+        @Field("latitude") latitude: String,
+        @Field("longitude") longitude: String
+    ): Call<LoginModel>
 
     //Save buyer profile Api
     @FormUrlEncoded
     @POST("save-profile.php")
-    fun saveBuyerProfile(@Field("uid") uid: String,
-                          @Field("name") name: String,
-                          @Field("gstn") gstn: String,
-                          @Field("email") email: String,
-                          @Field("contactNumber") contactNumber: String,
-                          @Field("address") address: String,
-                          @Field("city") city: String,
-                          @Field("state") state: String): Call<LoginModel>
+    fun saveBuyerProfile(
+        @Field("uid") uid: String,
+        @Field("name") name: String,
+        @Field("gstn") gstn: String,
+        @Field("email") email: String,
+        @Field("contactNumber") contactNumber: String,
+        @Field("address") address: String,
+        @Field("city") city: String,
+        @Field("state") state: String,
+        @Field("latitude") latitude: String,
+        @Field("longitude") longitude: String
+    ): Call<LoginModel>
 
     //sell e-waste
     @FormUrlEncoded
