@@ -37,7 +37,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_ac"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -69,7 +69,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_battery"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -98,7 +98,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_fan"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -126,7 +126,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_laptop"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -155,7 +155,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_mobile"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -184,7 +184,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_monitor"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -212,7 +212,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_refregirator"
                     android:background="@color/scheme_1"/>
                 <TextView
 
@@ -241,7 +241,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_knowledge_hub"
+                    android:src="@drawable/ic_solarpanel"
                     android:background="@color/scheme_1"/>
                 <TextView
 
