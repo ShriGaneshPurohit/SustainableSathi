@@ -22,7 +22,9 @@ interface InterfaceData {
                           @Field("contactNumber") contactNumber: String,
                           @Field("address") address: String,
                           @Field("city") city: String,
-                          @Field("state") state: String): Call<LoginModel>
+                          @Field("state") state: String,
+                          @Field("latitude") latitude: String,
+                          @Field("longitude") longitude: String): Call<LoginModel>
 
     //Save buyer profile Api
     @FormUrlEncoded
