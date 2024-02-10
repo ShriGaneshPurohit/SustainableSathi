@@ -14,7 +14,8 @@
         android:text="Categories"
         android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif" />
+        android:fontFamily="sans-serif"
+        />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,19 +30,31 @@
                 android:id="@+id/cardView1"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:backgroundTint="@color/black"
+
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp" />
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AC"
+                    android:textSize="@dimen/_15ssp"
+                    tools:ignore="RtlCompat"
+
+
+                    />
 
             </androidx.cardview.widget.CardView>
 
@@ -49,18 +62,25 @@
                 android:id="@+id/cardView2"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
                 <TextView
+
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:textAlignment="center"
+                    android:background="@color/scheme_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:text="Battery"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -75,13 +95,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView1">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fan"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -95,14 +123,21 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laptop"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -117,13 +152,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -138,13 +181,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monitor"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -158,14 +209,21 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5">
-
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Refregirator"
                     android:textSize="@dimen/_15ssp" />
 
             </androidx.cardview.widget.CardView>
@@ -180,15 +238,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
-                <TextView
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="Category Name"
+                    android:layout_height="@dimen/_45sdp"
+                    android:src="@drawable/ic_knowledge_hub"
+                    android:background="@color/scheme_1"/>
+                <TextView
+
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Solar Panel"
                     android:textSize="@dimen/_15ssp" />
-
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
