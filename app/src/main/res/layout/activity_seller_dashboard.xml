@@ -11,6 +11,7 @@
     tools:context=".SellerDashboardActivity">
 
     <ImageView
+        android:id="@+id/iv_logo"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_100sdp"
         android:layout_gravity="center"

@@ -25,10 +25,10 @@ class LoginSharedPreferenceHelper(private val context: Context) {
     }
 
     fun getUserType(): String? {
-        return sharedPreferences.getString("LoginType", null)
+        return sharedPreferences.getString("LoginType", "none")
     }
 
     fun getUid(): String? {
-        return sharedPreferences.getString("Uid", null)
+        return sharedPreferences.getString("Uid", "none")
     }
 }
