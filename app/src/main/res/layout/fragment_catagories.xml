@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoriesFragment"
+    android:orientation="vertical"
     android:padding="@dimen/_10sdp"
-    android:orientation="vertical">
+    tools:context=".CategoriesFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
         android:text="Categories"
         android:textSize="@dimen/_20ssp"
-        android:textStyle="bold"
-        android:fontFamily="sans-serif"
-        />
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,31 +29,33 @@
                 android:id="@+id/cardView1"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
-
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-                <ImageView
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_ac"
-                    android:background="@color/scheme_1"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_ac" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="AC"
-                    android:textSize="@dimen/_15ssp"
-                    tools:ignore="RtlCompat"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="AC"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlCompat" />
 
-
-                    />
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -66,22 +67,28 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_battery"
-                    android:background="@color/scheme_1"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:textAlignment="center"
-                    android:background="@color/scheme_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Battery"
-                    android:textSize="@dimen/_15ssp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_battery" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Battery"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -90,27 +97,32 @@
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView1">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_fan"
-                    android:background="@color/scheme_1"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Fan"
-                    android:textSize="@dimen/_15ssp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_fan" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Fan"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -118,27 +130,33 @@
                 android:id="@+id/cardView4"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:backgroundTint="@color/black"
-                app:cardCornerRadius="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView2">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_laptop"
-                    android:background="@color/scheme_1"/>
-                <TextView
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Laptop"
-                    android:textSize="@dimen/_15ssp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_laptop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Laptop"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -146,28 +164,29 @@
                 android:id="@+id/cardView5"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_mobile"
-                    android:background="@color/scheme_1"/>
+                    android:background="@color/scheme_1"
+                    android:src="@drawable/ic_mobile" />
+
                 <TextView
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
                     android:text="Mobile"
-                    android:textSize="@dimen/_15ssp" />
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -175,8 +194,8 @@
                 android:id="@+id/cardView6"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
-                android:backgroundTint="@color/black"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4">
@@ -184,19 +203,20 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_monitor"
-                    android:background="@color/scheme_1"/>
+                    android:background="@color/scheme_1"
+                    android:src="@drawable/ic_monitor" />
+
                 <TextView
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
                     android:text="Monitor"
-                    android:textSize="@dimen/_15ssp" />
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -204,27 +224,29 @@
                 android:id="@+id/cardView7"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_refregirator"
-                    android:background="@color/scheme_1"/>
+                    android:background="@color/scheme_1"
+                    android:src="@drawable/ic_refregirator" />
+
                 <TextView
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
                     android:text="Refregirator"
-                    android:textSize="@dimen/_15ssp" />
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -232,28 +254,29 @@
                 android:id="@+id/cardView8"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_45sdp"
-                    android:src="@drawable/ic_solarpanel"
-                    android:background="@color/scheme_1"/>
+                    android:background="@color/scheme_1"
+                    android:src="@drawable/ic_solarpanel" />
+
                 <TextView
 
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/scheme_2"
                     android:text="Solar Panel"
-                    android:textSize="@dimen/_15ssp" />
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
