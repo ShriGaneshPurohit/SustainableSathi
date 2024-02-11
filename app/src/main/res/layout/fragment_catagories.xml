@@ -26,7 +26,7 @@
             android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView1"
+                android:id="@+id/cv_ac"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
@@ -60,7 +60,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView2"
+                android:id="@+id/cv_battery"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
@@ -93,13 +93,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView3"
+                android:id="@+id/cv_fan"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView1">
+                app:layout_constraintTop_toBottomOf="@+id/cv_ac">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -127,13 +127,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView4"
+                android:id="@+id/cv_laptop"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+                app:layout_constraintTop_toBottomOf="@+id/cv_battery">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -161,13 +161,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView5"
+                android:id="@+id/cv_mobile"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+                app:layout_constraintTop_toBottomOf="@+id/cv_fan">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -195,13 +195,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView6"
+                android:id="@+id/cv_monitor"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView4">
+                app:layout_constraintTop_toBottomOf="@+id/cv_laptop">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -229,13 +229,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView7"
+                android:id="@+id/cv_refrigerator"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+                app:layout_constraintTop_toBottomOf="@+id/cv_mobile">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -253,7 +253,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/scheme_2"
-                        android:text="Refregirator"
+                        android:text="Refrigerator"
                         android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="@dimen/_15ssp"
@@ -264,13 +264,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView8"
+                android:id="@+id/cv_solarPanel"
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView6">
+                app:layout_constraintTop_toBottomOf="@+id/cv_monitor">
 
 
                 <LinearLayout
