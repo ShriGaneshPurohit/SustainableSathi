@@ -165,28 +165,32 @@
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:background="@color/scheme_1"
-                    android:src="@drawable/ic_mobile" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_mobile" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
-                    android:text="Mobile"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Mobile"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -195,28 +199,32 @@
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:background="@color/scheme_1"
-                    android:src="@drawable/ic_monitor" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_monitor" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
-                    android:text="Monitor"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Monitor"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -225,28 +233,33 @@
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
-                <ImageView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:background="@color/scheme_1"
-                    android:src="@drawable/ic_refregirator" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_refregirator" />
 
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
-                    android:text="Refregirator"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Refregirator"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -255,28 +268,34 @@
                 android:layout_width="@dimen/_140sdp"
                 android:layout_height="@dimen/_65sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/black"
                 app:cardCornerRadius="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_45sdp"
-                    android:background="@color/scheme_1"
-                    android:src="@drawable/ic_solarpanel" />
 
-                <TextView
-
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:background="@color/scheme_2"
-                    android:text="Solar Panel"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_15ssp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:background="@color/scheme_1"
+                        android:src="@drawable/ic_solarpanel" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/scheme_2"
+                        android:text="Solar Panel"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
