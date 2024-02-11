@@ -1,6 +1,5 @@
 package com.paryavaranRakshak.sustainablesathi
 
-import android.Manifest
 import android.app.ProgressDialog
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -18,9 +17,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
+import com.paryavaranRakshak.sustainablesathi.buyer.BuyerDashboardActivity
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityProfileRegistrationBinding
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
+import com.paryavaranRakshak.sustainablesathi.seller.SellerDashboardActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

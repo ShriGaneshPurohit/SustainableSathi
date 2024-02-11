@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.buyer
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
-import com.paryavaranRakshak.sustainablesathi.adapter.ProductAdapter
+import com.paryavaranRakshak.sustainablesathi.buyer.adapter.ProductAdapter
 import com.paryavaranRakshak.sustainablesathi.databinding.FragmentNearYouBinding
-import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
+import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,16 +1,13 @@
-package com.paryavaranRakshak.sustainablesathi.adapter
+package com.paryavaranRakshak.sustainablesathi.seller.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.paryavaranRakshak.sustainablesathi.R
-import com.paryavaranRakshak.sustainablesathi.models.LocatorFacilityModel
+import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 
 class NearestFacilityAdapter(val context: Context, val list: List<LocatorFacilityModel>) : RecyclerView.Adapter<NearestFacilityAdapter.ViewHolder>() {
 

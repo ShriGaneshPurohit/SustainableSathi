@@ -1,13 +1,13 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.seller
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
-import com.paryavaranRakshak.sustainablesathi.adapter.NearestFacilityAdapter
+import com.paryavaranRakshak.sustainablesathi.seller.adapter.NearestFacilityAdapter
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityFacilityLocatorBinding
-import com.paryavaranRakshak.sustainablesathi.models.LocatorFacilityModel
+import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import retrofit2.Call
 import retrofit2.Callback

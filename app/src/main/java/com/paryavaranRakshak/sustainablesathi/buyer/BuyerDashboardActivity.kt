@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.buyer
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityBuyerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 
@@ -44,7 +45,7 @@ class BuyerDashboardActivity : AppCompatActivity() {
         loginHelper.setLoginStatus("pending")
         loginHelper.setUid("none")
         loginHelper.setUserType("none")
-        startActivity(Intent(this,SplashScreen::class.java))
+        startActivity(Intent(this, SplashScreen::class.java))
         finishAffinity()
     }
 

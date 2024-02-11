@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi.utils
+package com.paryavaranRakshak.sustainablesathi.buyer.utils
 
 object ProductUtils {
 

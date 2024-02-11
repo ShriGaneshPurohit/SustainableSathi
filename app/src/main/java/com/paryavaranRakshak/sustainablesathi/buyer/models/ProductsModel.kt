@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi.models
+package com.paryavaranRakshak.sustainablesathi.buyer.models
 
 data class ProductsModel(
     val name: String,

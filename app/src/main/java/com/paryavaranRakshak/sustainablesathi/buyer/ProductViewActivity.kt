@@ -1,12 +1,11 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.buyer
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityProductViewBinding
-import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
-import com.paryavaranRakshak.sustainablesathi.utils.ProductUtils
+import com.paryavaranRakshak.sustainablesathi.buyer.utils.ProductUtils
 
 class ProductViewActivity : AppCompatActivity() {
 

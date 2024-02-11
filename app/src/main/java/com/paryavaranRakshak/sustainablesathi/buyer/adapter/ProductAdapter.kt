@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi.adapter
+package com.paryavaranRakshak.sustainablesathi.buyer.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.paryavaranRakshak.sustainablesathi.ProductViewActivity
+import com.paryavaranRakshak.sustainablesathi.buyer.ProductViewActivity
 import com.paryavaranRakshak.sustainablesathi.R
-import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
-import com.paryavaranRakshak.sustainablesathi.utils.ProductUtils
+import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
+import com.paryavaranRakshak.sustainablesathi.buyer.utils.ProductUtils
 
 class ProductAdapter(val context: Context, val list: List<ProductsModel>) : RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
 

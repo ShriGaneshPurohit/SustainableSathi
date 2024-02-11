@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi.models
+package com.paryavaranRakshak.sustainablesathi.seller.models
 
 import com.google.gson.annotations.SerializedName
 

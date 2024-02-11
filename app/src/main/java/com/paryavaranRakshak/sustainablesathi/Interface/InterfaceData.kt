@@ -1,8 +1,8 @@
 package com.paryavaranRakshak.sustainablesathi.Interface
 
-import com.paryavaranRakshak.sustainablesathi.models.LocatorFacilityModel
+import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
-import com.paryavaranRakshak.sustainablesathi.models.ProductsModel
+import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

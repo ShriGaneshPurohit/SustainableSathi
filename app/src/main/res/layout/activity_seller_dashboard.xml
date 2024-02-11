@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:paddingStart="@dimen/_20sdp"
     android:paddingEnd="@dimen/_20sdp"
-    tools:context=".SellerDashboardActivity">
+    tools:context=".seller.SellerDashboardActivity">
 
     <ImageView
         android:id="@+id/iv_logo"

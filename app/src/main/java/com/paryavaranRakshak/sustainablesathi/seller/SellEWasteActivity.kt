@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.seller
 
 import android.app.ProgressDialog
 import android.net.Uri
@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
+import com.paryavaranRakshak.sustainablesathi.R
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySellEwasteBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import retrofit2.Call

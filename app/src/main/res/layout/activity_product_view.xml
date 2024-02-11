@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ProductViewActivity"
+    tools:context=".buyer.ProductViewActivity"
     android:orientation="vertical"
     android:layout_margin="@dimen/_5sdp">
 

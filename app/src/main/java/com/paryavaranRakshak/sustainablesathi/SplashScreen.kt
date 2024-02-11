@@ -6,8 +6,10 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.paryavaranRakshak.sustainablesathi.buyer.BuyerDashboardActivity
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySplashScreenBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
+import com.paryavaranRakshak.sustainablesathi.seller.SellerDashboardActivity
 
 class SplashScreen : AppCompatActivity() {
 

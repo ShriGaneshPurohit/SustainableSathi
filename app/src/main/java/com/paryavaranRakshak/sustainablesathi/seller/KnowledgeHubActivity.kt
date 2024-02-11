@@ -1,4 +1,4 @@
-package com.paryavaranRakshak.sustainablesathi
+package com.paryavaranRakshak.sustainablesathi.seller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -16,22 +16,22 @@ class KnowledgeHubActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.cvStage1.setOnClickListener{
-            val intent = Intent(this,YoutubePlayerActivity::class.java)
+            val intent = Intent(this, YoutubePlayerActivity::class.java)
             intent.putExtra("videoId","MQLadfsvfLo")
             startActivity(intent)
         }
         binding.cvStage2.setOnClickListener{
-            val intent = Intent(this,YoutubePlayerActivity::class.java)
+            val intent = Intent(this, YoutubePlayerActivity::class.java)
             intent.putExtra("videoId","h5Z5m5by9UA")
             startActivity(intent)
         }
         binding.cvStage3.setOnClickListener{
-            val intent = Intent(this,YoutubePlayerActivity::class.java)
+            val intent = Intent(this, YoutubePlayerActivity::class.java)
             intent.putExtra("videoId","ApdkhWd7SfQ")
             startActivity(intent)
         }
         binding.cvStage4.setOnClickListener{
-            val intent = Intent(this,YoutubePlayerActivity::class.java)
+            val intent = Intent(this, YoutubePlayerActivity::class.java)
             intent.putExtra("videoId","-uyIzKIw0xY")
             startActivity(intent)
         }
