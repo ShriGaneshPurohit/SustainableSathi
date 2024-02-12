@@ -75,7 +75,6 @@ class NearYouFragment : Fragment() {
 
             override fun onFailure(call: Call<List<ProductsModel>>, t: Throwable) {
                 Toast.makeText(context, "No product found near you!!", Toast.LENGTH_LONG).show()
-                println(t.message)
             }
         })
 

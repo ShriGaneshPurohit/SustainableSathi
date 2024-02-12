@@ -1,5 +1,6 @@
 package com.paryavaranRakshak.sustainablesathi.Interface
 
+import com.paryavaranRakshak.sustainablesathi.buyer.models.CategoryProductsModel
 import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
 import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
@@ -67,5 +68,9 @@ interface InterfaceData {
     //Get Near you product Api
     @GET("near-you-product.php")
     fun getNearByProducts(@Query("uid") uid: String): Call<List<ProductsModel>>
+
+    //Get category product Api
+    @GET("product-category-api.php")
+    fun getProductsByCategory(@Query("category") category: String): Call<List<CategoryProductsModel>>
 
 }
