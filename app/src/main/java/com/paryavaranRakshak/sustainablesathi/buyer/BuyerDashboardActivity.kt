@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityBuyerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
@@ -17,6 +18,9 @@ class BuyerDashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBuyerDashboardBinding
 
     private lateinit var loginHelper: LoginSharedPreferenceHelper
+
+    //User auth data
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +46,9 @@ class BuyerDashboardActivity : AppCompatActivity() {
     }
 
     private fun logout() {
+        //user auth data
+        auth = FirebaseAuth.getInstance()
+        auth.signOut()
         loginHelper.setLoginStatus("pending")
         loginHelper.setUid("none")
         loginHelper.setUserType("none")
