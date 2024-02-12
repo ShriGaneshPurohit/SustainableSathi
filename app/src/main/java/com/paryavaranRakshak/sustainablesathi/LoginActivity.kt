@@ -65,16 +65,7 @@ class LoginActivity : AppCompatActivity() {
         progressDialog.setCancelable(false)
 
         //btn google
-        binding.btnGoogle.setOnClickListener {
-            val currentUser = auth.currentUser
-            if (currentUser != null) {
-                // User is already signed in, navigate to the main activity
-                checkProfile()
-            } else {
-                // User is not signed in, proceed with Google sign-in
-                signInGoogle()
-            }
-        }
+        binding.btnGoogle.setOnClickListener { signInGoogle() }
 
     }
 
@@ -116,48 +107,63 @@ class LoginActivity : AppCompatActivity() {
 
     private fun checkProfile() {
         val currentUser = auth.currentUser
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://sustainable-sathi.tech/backend/api/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-            .create(InterfaceData::class.java)
 
-        val call = retrofit.checkProfile(currentUser!!.uid, currentUser.displayName!!)
+        if (currentUser != null && currentUser.displayName != null) {
+            val retrofit = Retrofit.Builder()
+                .baseUrl("https://sustainable-sathi.tech/backend/api/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(InterfaceData::class.java)
 
-        call.enqueue(object : Callback<LoginModel> {
-            override fun onResponse(
-                call: Call<LoginModel>,
-                response: Response<LoginModel>
-            ) {
-                if (response.isSuccessful) {
-                    val data = response.body()!!
-                    if (data.message.contains("Buyer")) {
-                        // Save status and user type in SharedPreferences
-                        sharedPreferencesHelper.setLoginStatus("completed")
-                        sharedPreferencesHelper.setUserType("buyer")
-                        sharedPreferencesHelper.setUid(currentUser.uid)
-                        progressDialog.dismiss()
-                        startActivity(Intent(this@LoginActivity, BuyerDashboardActivity::class.java))
-                        finish()
-                    } else if (data.message.contains("Seller")) {
-                        // Save status and user type in SharedPreferences
-                        sharedPreferencesHelper.setLoginStatus("completed")
-                        sharedPreferencesHelper.setUserType("seller")
-                        sharedPreferencesHelper.setUid(currentUser.uid)
-                        progressDialog.dismiss()
-                        startActivity(Intent(this@LoginActivity, SellerDashboardActivity::class.java))
-                        finish()
-                    } else {
-                        println(data.message)
-                        exit()
+            val call = retrofit.checkProfile(currentUser.uid, currentUser.displayName!!)
+
+            call.enqueue(object : Callback<LoginModel> {
+                override fun onResponse(
+                    call: Call<LoginModel>,
+                    response: Response<LoginModel>
+                ) {
+                    if (response.isSuccessful) {
+                        val data = response.body()
+
+                        if (data != null) {
+                            when (data.message) {
+                                "Buyer" -> {
+                                    // Save status and user type in SharedPreferences
+                                    sharedPreferencesHelper.setLoginStatus("completed")
+                                    sharedPreferencesHelper.setUserType("buyer")
+                                    sharedPreferencesHelper.setUid(currentUser.uid)
+                                    progressDialog.dismiss()
+                                    startActivity(Intent(this@LoginActivity, BuyerDashboardActivity::class.java))
+                                    finish()
+                                }
+                                "Seller" -> {
+                                    // Save status and user type in SharedPreferences
+                                    sharedPreferencesHelper.setLoginStatus("completed")
+                                    sharedPreferencesHelper.setUserType("seller")
+                                    sharedPreferencesHelper.setUid(currentUser.uid)
+                                    progressDialog.dismiss()
+                                    startActivity(Intent(this@LoginActivity, SellerDashboardActivity::class.java))
+                                    finish()
+                                }
+                                else -> {
+                                    exit()
+                                }
+                            }
+                        } else {
+                            // Handle the case where the response body is null
+                        }
                     }
                 }
-            }
 
-            override fun onFailure(call: Call<LoginModel>, t: Throwable) {
-                Toast.makeText(this@LoginActivity, "Error checking profile!!!", Toast.LENGTH_SHORT).show()
-            }
-        })
+                override fun onFailure(call: Call<LoginModel>, t: Throwable) {
+                    t.printStackTrace()
+                    Toast.makeText(this@LoginActivity, "Error checking profile: ${t.message}", Toast.LENGTH_SHORT).show()
+                    progressDialog.dismiss()
+                }
+            })
+        } else {
+            // Handle the case where currentUser or displayName is null
+        }
     }
 
     private fun exit() {

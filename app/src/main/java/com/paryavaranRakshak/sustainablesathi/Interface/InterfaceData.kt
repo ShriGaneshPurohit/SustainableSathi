@@ -45,7 +45,7 @@ interface InterfaceData {
     ): Call<LoginModel>
 
     //check login
-    @GET("save-profile.php")
+    @GET("checkRecord.php")
     fun checkProfile(
         @Query("uid") uid: String,
         @Query("name") name: String

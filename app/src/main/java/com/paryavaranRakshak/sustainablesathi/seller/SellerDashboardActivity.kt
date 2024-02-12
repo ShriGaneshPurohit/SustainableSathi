@@ -3,6 +3,7 @@ package com.paryavaranRakshak.sustainablesathi.seller
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySellerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
@@ -13,6 +14,8 @@ class SellerDashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySellerDashboardBinding
 
     private lateinit var loginHelper: LoginSharedPreferenceHelper
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +40,14 @@ class SellerDashboardActivity : AppCompatActivity() {
     }
 
     private fun logout() {
+        val auth = FirebaseAuth.getInstance()
+        auth.signOut()
         loginHelper.setLoginStatus("pending")
         loginHelper.setUid("none")
         loginHelper.setUserType("none")
         startActivity(Intent(this, SplashScreen::class.java))
         finishAffinity()
     }
+
 
 }
