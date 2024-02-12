@@ -118,25 +118,31 @@ class ProfileRegistrationActivity : AppCompatActivity() {
     private fun getData(uid: String, name: String, email: String) {
         pd.show()
         getCoordinates()
-        val contactNumber = binding.etContact.text.toString()
-        val address = binding.etAddress.text.toString()
-        val city = binding.etCity.text.toString()
-        val state = binding.etState.text.toString()
+        if (latitude != 0.0 && longitude != 0.0) {
+            val contactNumber = binding.etContact.text.toString()
+            val address = binding.etAddress.text.toString()
+            val city = binding.etCity.text.toString()
+            val state = binding.etState.text.toString()
 
-        when (accountSelected) {
-            0 -> {
-                val gstn = binding.etGstn.text.toString()
-                registerBuyer(uid, name, email, gstn, contactNumber, address, city, state)
-            }
+            when (accountSelected) {
+                0 -> {
+                    val gstn = binding.etGstn.text.toString()
+                    registerBuyer(uid, name, email, gstn, contactNumber, address, city, state)
+                }
 
-            1 -> {
-                val age = binding.etAge.text.toString()
-                registerSeller(uid, name, email, age, contactNumber, address, city, state)
-            }
+                1 -> {
+                    val age = binding.etAge.text.toString()
+                    registerSeller(uid, name, email, age, contactNumber, address, city, state)
+                }
 
-            else -> {
-                Toast.makeText(this, "Please select account type..", Toast.LENGTH_SHORT).show()
+                else -> {
+                    Toast.makeText(this, "Please select account type..", Toast.LENGTH_SHORT).show()
+                    pd.dismiss()
+                }
             }
+        } else {
+            Toast.makeText(this,"Location Required...",Toast.LENGTH_SHORT).show()
+            pd.dismiss()
         }
     }
 
@@ -241,7 +247,6 @@ class ProfileRegistrationActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<LoginModel>, t: Throwable) {
                 handleError()
-                println(t.message)
             }
         })
     }
