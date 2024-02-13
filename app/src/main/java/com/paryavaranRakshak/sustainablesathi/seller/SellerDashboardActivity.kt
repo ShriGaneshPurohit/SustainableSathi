@@ -1,12 +1,16 @@
 package com.paryavaranRakshak.sustainablesathi.seller
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySellerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
+import java.io.File
 
 class SellerDashboardActivity : AppCompatActivity() {
 
@@ -35,11 +39,11 @@ class SellerDashboardActivity : AppCompatActivity() {
         binding.cvKnowledgeHub.setOnClickListener{ startActivity(Intent(this, KnowledgeHubActivity::class.java)) }
 
         //logout
-        binding.ivLogo.setOnClickListener { logout() }
+        binding.ivLogo.setOnClickListener { exit() }
 
     }
 
-    private fun logout() {
+    private fun exit() {
         val auth = FirebaseAuth.getInstance()
         auth.signOut()
         loginHelper.setLoginStatus("pending")

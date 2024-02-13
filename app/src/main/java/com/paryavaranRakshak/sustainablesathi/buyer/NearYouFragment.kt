@@ -8,7 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
+import com.paryavaranRakshak.sustainablesathi.buyer.adapter.CategoryProductAdapter
 import com.paryavaranRakshak.sustainablesathi.buyer.adapter.ProductAdapter
+import com.paryavaranRakshak.sustainablesathi.buyer.models.CategoryProductsModel
 import com.paryavaranRakshak.sustainablesathi.databinding.FragmentNearYouBinding
 import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
@@ -77,7 +79,6 @@ class NearYouFragment : Fragment() {
                 Toast.makeText(context, "No product found near you!!", Toast.LENGTH_LONG).show()
             }
         })
-
     }
 
 }
