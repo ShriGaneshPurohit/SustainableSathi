@@ -19,6 +19,9 @@
         android:theme="@style/Theme.SustainableSathi"
         tools:targetApi="31">
         <activity
+            android:name=".TestingActivity"
+            android:exported="false" />
+        <activity
             android:name=".buyer.CategoryProductsActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bm_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/bm_locator"
+        android:title="Locator"
+        android:icon="@drawable/ic_locator"/>
+
+    <item
+        android:id="@+id/bm_sell"
+        android:title="Sell"
+        android:icon="@drawable/ic_sell"/>
+
+    <item
+        android:id="@+id/bm_knowledgeHub"
+        android:title="GyaanKosh"
+        android:icon="@drawable/ic_knowledgehub"/>
+
+    <item
+        android:id="@+id/bm_legalCompliance"
+        android:title="Policy"
+        android:icon="@drawable/ic_policy"/>
+
+</menu>
