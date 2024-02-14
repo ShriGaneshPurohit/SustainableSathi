@@ -107,7 +107,7 @@
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
             <Spinner
-                android:id="@+id/et_sub_category"
+                android:id="@+id/et_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/txtview_rounded_corners"
@@ -124,13 +124,11 @@
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginBottom="@dimen/_10sdp"/>
 
-            <Spinner
-                android:id="@+id/et_category"
+            <Button
+                android:id="@+id/btn_DatePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/txtview_rounded_corners"
-                android:spinnerMode="dropdown"
-                tools:listitem="@layout/dropdown_item" />
+                android:text="Pick a date"/>
 
             <!-- TODO("Date Picker") -->
 
@@ -240,21 +238,31 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/rb_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Top"
                     android:paddingEnd="@dimen/_5sdp"/>
 
                 <RadioButton
+                    android:id="@+id/rb_moderate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Moderate"
                     android:paddingEnd="@dimen/_5sdp"/>
 
                 <RadioButton
+                    android:id="@+id/rb_worst"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Worst"/>
+                    android:text="Worst"
+                    android:paddingEnd="@dimen/_5sdp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_notWorking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Working"/>
 
             </RadioGroup>
 

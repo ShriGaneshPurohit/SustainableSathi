@@ -58,7 +58,6 @@ interface InterfaceData {
         @Query("name") name: String,
         @Query("imageLink") imageLink: String,
         @Query("category") category: String,
-        @Query("subCategory") subCategory: String,
         @Query("description") description: String,
         @Query("quantity") quantity: Int,
         @Query("price") price: Float,

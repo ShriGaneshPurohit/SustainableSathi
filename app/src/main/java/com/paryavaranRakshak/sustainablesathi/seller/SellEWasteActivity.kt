@@ -1,5 +1,6 @@
 package com.paryavaranRakshak.sustainablesathi.seller
 
+import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.net.Uri
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.paryavaranRakshak.sustainablesathi.Interface.InterfaceData
@@ -20,7 +22,10 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 class SellEWasteActivity : AppCompatActivity() {
 
@@ -43,6 +48,12 @@ class SellEWasteActivity : AppCompatActivity() {
     //shared pref
     private lateinit var sharedPreferencesHelper: LoginSharedPreferenceHelper
 
+    private lateinit var selectedDate: String
+
+    private var finalPrice: Double = 0.0
+
+    private lateinit var alertDialog: AlertDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySellEwasteBinding.inflate(layoutInflater)
@@ -53,11 +64,12 @@ class SellEWasteActivity : AppCompatActivity() {
 
         storageRef = FirebaseStorage.getInstance().reference.child("productsImg")
 
+        alertDialog = AlertDialog.Builder(this).create()
+
         // Setting up categories
         val categories = resources.getStringArray(R.array.eWaste_category)
         val arrayAdapter = ArrayAdapter(this, R.layout.dropdown_item, categories)
         binding.etCategory.adapter = arrayAdapter
-        binding.etSubCategory.adapter = arrayAdapter
 
         // Spinner item selection listener
         binding.etCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -70,17 +82,7 @@ class SellEWasteActivity : AppCompatActivity() {
             }
         }
 
-        // Spinner item selection listener
-        binding.etSubCategory.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                subCategory = categories[position]
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                // Handle the case where nothing is selected, if needed
-            }
-        }
-
+        binding.btnDatePicker.setOnClickListener {pickDate()}
 
         //progress dialog
         pd = ProgressDialog(this)
@@ -89,9 +91,57 @@ class SellEWasteActivity : AppCompatActivity() {
 
         binding.cvProductImg.setOnClickListener { resultLauncher.launch("image/*") }
 
-        binding.btnSell.setOnClickListener { uploadImageToFirebase(Calendar.getInstance().time.toString()) }
+        //binding.btnSell.setOnClickListener { uploadImageToFirebase(Calendar.getInstance().time.toString()) }
+
+        binding.btnSell.setOnClickListener { getPrice() }
 
     }
+
+    private fun getPrice() {
+        pd.setTitle("Calculating best price...")
+        pd.show()
+
+        val sikkaPranali = sikkaPranali()
+
+        val quantity = Integer.parseInt(binding.etQuantity.text.toString())
+
+        val mrp: Double = (binding.etPrice.text.toString()).toDouble()
+
+        val conditionSelected = if (binding.rbTop.isChecked){
+            0
+        } else if (binding.rbModerate.isChecked) {
+            1
+        } else if (binding.rbWorst.isChecked) {
+            2
+        } else if (binding.rbNotWorking.isChecked) {
+            3
+        } else {
+            Toast.makeText(this,"Please select device condition..",Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
+        finalPrice = sikkaPranali.getPrice(dateFormat.parse(selectedDate)!!,mrp,conditionSelected)
+        showAlert(finalPrice.toString())
+
+    }
+
+    private fun pickDate() {
+        val materialDateBuilder: MaterialDatePicker.Builder<Long> =
+            MaterialDatePicker.Builder.datePicker()
+
+        materialDateBuilder.setTitleText("SELECT A DATE")
+        val materialDatePicker = materialDateBuilder.build()
+
+        materialDatePicker.show(supportFragmentManager, "MATERIAL_DATE_PICKER")
+
+        materialDatePicker.addOnPositiveButtonClickListener {
+            val selectedDateInMillis = materialDatePicker.selection ?: return@addOnPositiveButtonClickListener
+            val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
+            selectedDate = dateFormat.format(Date(selectedDateInMillis))
+        }
+    }
+
 
     //Image Picker
     private val resultLauncher = registerForActivityResult(
@@ -135,14 +185,13 @@ class SellEWasteActivity : AppCompatActivity() {
         val name = binding.etName.text.toString()
         val description = binding.etDescription.text.toString()
         val quantity = Integer.parseInt(binding.etQuantity.text.toString())
-        val price = Integer.parseInt(binding.etPrice.text.toString())
         val city = binding.etCity.text.toString()
         val state = binding.etState.text.toString()
 
-        uploadProduct(name,description,quantity, price, city, state)
+        uploadProduct(name,description,quantity, finalPrice.toFloat(), city, state)
     }
 
-    private fun uploadProduct(name: String, description: String, quantity: Int, price: Int, city: String, state: String) {
+    private fun uploadProduct(name: String, description: String, quantity: Int, price: Float, city: String, state: String) {
         // Initialize Retrofit
         val retrofit = Retrofit.Builder()
             .baseUrl("https://sustainable-sathi.tech/backend/api/seller/")
@@ -151,7 +200,7 @@ class SellEWasteActivity : AppCompatActivity() {
 
         val service = retrofit.create(InterfaceData::class.java)
 
-        val call = service.uploadProduct(name, imageUri.toString(), category!!, subCategory!!, description, quantity, price.toFloat(), sharedPreferencesHelper.getUid()!!, city, state)
+        val call = service.uploadProduct(name, imageUri.toString(), category!!, description, quantity, price, sharedPreferencesHelper.getUid()!!, city, state)
 
         call.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
@@ -167,6 +216,20 @@ class SellEWasteActivity : AppCompatActivity() {
             }
         })
         pd.dismiss()
+    }
+
+    fun showAlert(price: String) {
+        pd.dismiss()
+        alertDialog.setTitle("Sikka Pranali")
+        alertDialog.setMessage("The price for your device is - ₹ $price/-")
+        alertDialog.setCancelable(false)
+
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Sell") { _, _ ->
+            uploadImageToFirebase(Calendar.getInstance().time.toString())
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
     }
 
 }
