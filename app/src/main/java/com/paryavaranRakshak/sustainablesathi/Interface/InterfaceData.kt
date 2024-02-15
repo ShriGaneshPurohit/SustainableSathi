@@ -1,5 +1,6 @@
 package com.paryavaranRakshak.sustainablesathi.Interface
 
+import com.paryavaranRakshak.sustainablesathi.buyer.models.BuyProductModel
 import com.paryavaranRakshak.sustainablesathi.buyer.models.CategoryProductsModel
 import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
@@ -77,5 +78,12 @@ interface InterfaceData {
     //Get category product Api
     @GET("product-category-api.php")
     fun getProductsByCategory(@Query("category") category: String): Call<List<CategoryProductsModel>>
+
+    //Buy product
+    @GET("buy-product.php")
+    fun buyProduct(
+        @Query("buyer_uid") buyerUid: String,
+        @Query("product_id") productId: String
+    ): Call<BuyProductModel>
 
 }

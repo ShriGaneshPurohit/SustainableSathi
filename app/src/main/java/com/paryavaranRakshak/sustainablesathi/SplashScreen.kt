@@ -45,7 +45,7 @@ class SplashScreen : AppCompatActivity() {
             }
         } else {
             Handler(Looper.getMainLooper()).postDelayed({
-                startActivity(Intent(this, TestingActivity::class.java))
+                startActivity(Intent(this, LoginActivity::class.java))
                 overridePendingTransition(R.anim.zoom_in, R.anim.static_animation)
                 finishAffinity()
             }, Splash_Time_Out.toLong())

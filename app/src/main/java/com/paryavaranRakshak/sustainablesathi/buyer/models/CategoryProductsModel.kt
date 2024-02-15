@@ -1,6 +1,7 @@
 package com.paryavaranRakshak.sustainablesathi.buyer.models
 
 data class CategoryProductsModel(
+    val id: Int,
     val name: String,
     val image_link: String,
     val category: String,
