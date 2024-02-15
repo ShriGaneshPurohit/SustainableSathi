@@ -6,10 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.replace
 import com.google.firebase.auth.FirebaseAuth
+import com.paryavaranRakshak.sustainablesathi.R
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySellerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
+import com.paryavaranRakshak.sustainablesathi.seller.fragments.FacilityLocatorFragment
+import com.paryavaranRakshak.sustainablesathi.seller.fragments.HomeFragment
 import java.io.File
 
 class SellerDashboardActivity : AppCompatActivity() {
@@ -29,17 +34,19 @@ class SellerDashboardActivity : AppCompatActivity() {
         loginHelper = LoginSharedPreferenceHelper(this)
 
         //E - Waste Facility Locator
-        binding.cvEWasteLocator.setOnClickListener{ startActivity(Intent(this,
-            FacilityLocatorActivity::class.java)) }
+        //binding.cvEWasteLocator.setOnClickListener{ startActivity(Intent(this,
+          //  FacilityLocatorActivity::class.java)) }
 
         // Sell E - Waste
-        binding.cvSellEWaste.setOnClickListener{ startActivity(Intent(this, SellEWasteActivity::class.java)) }
+        //binding.cvSellEWaste.setOnClickListener{ startActivity(Intent(this, SellEWasteActivity::class.java)) }
 
         //Knowledge Hub
-        binding.cvKnowledgeHub.setOnClickListener{ startActivity(Intent(this, KnowledgeHubActivity::class.java)) }
+        //binding.cvKnowledgeHub.setOnClickListener{ startActivity(Intent(this, KnowledgeHubActivity::class.java)) }
 
         //logout
-        binding.ivLogo.setOnClickListener { exit() }
+        //binding.ivLogo.setOnClickListener { exit() }
+
+        replaceFragment(HomeFragment())
 
     }
 
@@ -53,5 +60,11 @@ class SellerDashboardActivity : AppCompatActivity() {
         finishAffinity()
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frameLayout, fragment)
+        fragmentTransaction.commit()
+    }
 
 }

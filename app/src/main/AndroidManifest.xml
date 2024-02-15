@@ -22,9 +22,6 @@
             android:name=".buyer.BuySikkaActivity"
             android:exported="false" />
         <activity
-            android:name=".TestingActivity"
-            android:exported="false" />
-        <activity
             android:name=".buyer.CategoryProductsActivity"
             android:exported="false" />
         <activity
@@ -38,9 +35,6 @@
         <activity
             android:name=".seller.YoutubePlayerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-            android:exported="false" />
-        <activity
-            android:name=".seller.KnowledgeHubActivity"
             android:exported="false" />
         <activity
             android:name=".seller.SellEWasteActivity"

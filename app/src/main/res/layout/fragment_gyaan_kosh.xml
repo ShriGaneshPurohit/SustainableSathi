@@ -1,39 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    tools:context=".seller.fragments.GyaanKoshFragment"
     android:background="#EDF1D6"
-    android:padding="@dimen/_10sdp">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-
-        android:elevation="@dimen/_70sdp">
-
-        <ImageView
-
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:src="@drawable/ic_knowledge_hub" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:fontFamily="@font/work_sans"
-            android:padding="@dimen/_5sdp"
-            android:text="Knowledge Hub"
-            android:textAlignment="center"
-            android:textSize="@dimen/_25sdp"
-            android:textStyle="bold"
-
-            />
-    </RelativeLayout>
-
+    android:paddingStart="@dimen/_10sdp"
+    android:paddingEnd="@dimen/_10sdp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +15,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="@dimen/_5sdp">
 
@@ -50,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                app:cardCornerRadius="@dimen/_20sdp">
+                app:cardCornerRadius="@dimen/_10sdp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -79,9 +53,9 @@
                         android:layout_width="98dp"
                         android:layout_height="97dp"
                         android:layout_alignParentTop="true"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_marginTop="33dp"
-                        android:layout_marginRight="31dp"
+                        android:layout_marginEnd="31dp"
                         android:src="@drawable/knowledgehub" />
 
                 </RelativeLayout>
@@ -231,4 +205,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</FrameLayout>
