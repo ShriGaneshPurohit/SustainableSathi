@@ -1,13 +1,10 @@
 package com.paryavaranRakshak.sustainablesathi.seller
 
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.R
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
@@ -16,7 +13,7 @@ import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import com.paryavaranRakshak.sustainablesathi.seller.fragments.FacilityLocatorFragment
 import com.paryavaranRakshak.sustainablesathi.seller.fragments.GyaanKoshFragment
 import com.paryavaranRakshak.sustainablesathi.seller.fragments.HomeFragment
-import java.io.File
+
 
 class SellerDashboardActivity : AppCompatActivity() {
 
@@ -63,7 +60,24 @@ class SellerDashboardActivity : AppCompatActivity() {
                 "GyaanKosh" -> {
                     replaceFragment(GyaanKoshFragment())
                 }
-            }
+                "Policy" -> {
+                    val externalLink = "https://cpcb.nic.in/uploads/Projects/E-Waste/e-waste_rules_2022.pdf"
+
+                    // Create an intent with ACTION_VIEW and the external link URI
+
+                    // Create an intent with ACTION_VIEW and the external link URI
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(externalLink))
+
+                    // Start the intent
+
+                    // Start the intent
+                    startActivity(intent)
+
+                    // Finish the current activity if needed
+
+                    // Finish the current activity if needed
+
+                }}
             return@setOnItemSelectedListener true
         }
 
