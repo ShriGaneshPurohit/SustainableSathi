@@ -70,6 +70,7 @@ class FacilityLocatorFragment : Fragment() {
                 if (Adapter.itemCount>0){
                     binding.progressBar.visibility = View.GONE
                     binding.rvFacility.visibility = View.VISIBLE
+                    binding.tvFacilityCount.text = "${Adapter.itemCount} Facilities Found In 200KM Radius"
                 }
 
             }

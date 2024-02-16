@@ -14,6 +14,7 @@ import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivitySellerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
 import com.paryavaranRakshak.sustainablesathi.seller.fragments.FacilityLocatorFragment
+import com.paryavaranRakshak.sustainablesathi.seller.fragments.GyaanKoshFragment
 import com.paryavaranRakshak.sustainablesathi.seller.fragments.HomeFragment
 import java.io.File
 
@@ -47,6 +48,24 @@ class SellerDashboardActivity : AppCompatActivity() {
         //binding.ivLogo.setOnClickListener { exit() }
 
         replaceFragment(HomeFragment())
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.toString()) {
+                "Home" -> {
+                    replaceFragment(HomeFragment())
+                }
+                "Locator" -> {
+                    replaceFragment(FacilityLocatorFragment())
+                }
+                "Sell" -> {
+                    startActivity(Intent(this,SellEWasteActivity::class.java))
+                }
+                "GyaanKosh" -> {
+                    replaceFragment(GyaanKoshFragment())
+                }
+            }
+            return@setOnItemSelectedListener true
+        }
 
     }
 
