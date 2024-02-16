@@ -42,6 +42,7 @@
         android:visibility="gone"/>
 
     <ImageView
+        android:layout_marginTop="@dimen/_20sdp"
         android:id="@+id/iv_product"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"

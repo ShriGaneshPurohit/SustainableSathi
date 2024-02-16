@@ -21,6 +21,13 @@
             android:textStyle="bold"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="@dimen/_5sdp"/>
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/sikka"
+            android:layout_marginStart="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"/>
 
     </LinearLayout>
 
