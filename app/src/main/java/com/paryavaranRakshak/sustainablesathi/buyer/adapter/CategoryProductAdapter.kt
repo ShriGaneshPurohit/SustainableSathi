@@ -46,6 +46,7 @@ class CategoryProductAdapter(val context: Context, val list: List<CategoryProduc
         // Set click listener for the item
         holder.itemView.setOnClickListener {
             // Pass the selected product details to the utils
+            ProductUtils.productId = list[position].id
             ProductUtils.productName = list[position].name
             ProductUtils.imageLink = list[position].image_link
             ProductUtils.description = list[position].description

@@ -24,6 +24,18 @@ class CategoriesFragment : Fragment() {
 
         binding.cvMobile.setOnClickListener { getCategory("Mobile") }
 
+        binding.cvBattery.setOnClickListener { getCategory("Battery") }
+
+        binding.cvFan.setOnClickListener { getCategory("Fan") }
+
+        binding.cvLaptop.setOnClickListener { getCategory("Laptop") }
+
+        binding.cvMonitor.setOnClickListener { getCategory("Monitor") }
+
+        binding.cvRefrigerator.setOnClickListener { getCategory("Refrigerator") }
+
+        binding.cvSolarPanel.setOnClickListener { getCategory("Solar Panel") }
+
         return binding.root
     }
 

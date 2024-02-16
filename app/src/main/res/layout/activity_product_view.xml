@@ -6,24 +6,25 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".buyer.ProductViewActivity"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/_5sdp">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="@dimen/_50sdp">
 
         <Button
             android:id="@+id/btnBack"
             android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/arrow_back"/>
+            android:background="@drawable/arrow_back"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Product Name"
+            android:layout_gravity="center"
             android:textSize="@dimen/_20ssp"
             android:layout_margin="@dimen/_3sdp"
             android:layout_marginStart="@dimen/_5sdp"
@@ -71,14 +72,28 @@
                 android:id="@+id/tv_productDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Category - "/>
+
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+
 
             <Button
                 android:id="@+id/btn_buy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/scheme_2"
-                android:text="Get Quote"
+                android:text="Buy"
                 android:layout_marginTop="@dimen/_10sdp"/>
 
         </LinearLayout>

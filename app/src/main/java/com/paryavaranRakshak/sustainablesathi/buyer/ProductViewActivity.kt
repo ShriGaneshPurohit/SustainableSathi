@@ -1,6 +1,8 @@
 package com.paryavaranRakshak.sustainablesathi.buyer
 
+import android.app.AlertDialog
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -18,6 +20,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.Calendar
 
 class ProductViewActivity : AppCompatActivity() {
 
@@ -26,6 +29,8 @@ class ProductViewActivity : AppCompatActivity() {
 
     //shared pref
     private lateinit var sharedPreferencesHelper: LoginSharedPreferenceHelper
+
+    private lateinit var alertDialog: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +42,11 @@ class ProductViewActivity : AppCompatActivity() {
         //initializing data
         initialize()
 
+        alertDialog = AlertDialog.Builder(this).create()
+
         binding.btnBack.setOnClickListener{ finish() }
 
-        binding.btnBuy.setOnClickListener { buyProduct() }
+        binding.btnBuy.setOnClickListener { showAlert() }
 
     }
 
@@ -74,20 +81,30 @@ class ProductViewActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val resultMessage = response.body()?.message
                     Toast.makeText(this@ProductViewActivity, resultMessage, Toast.LENGTH_SHORT).show()
+                    alertDialog.setMessage(resultMessage)
                 } else {
                     Toast.makeText(this@ProductViewActivity, "API request failed", Toast.LENGTH_SHORT).show()
-                    // Log the error for further investigation
-                    Log.e("API_CALL", "Unsuccessful response: ${response.code()}")
+                    alertDialog.setMessage("Unsuccessful response: ${response.code()}")
                 }
             }
 
             override fun onFailure(call: Call<BuyProductModel>, t: Throwable) {
                 Toast.makeText(this@ProductViewActivity, "No product found near you!!", Toast.LENGTH_LONG).show()
-                // Log the error for further investigation
-                Log.e("API_CALL", "Request failed: ${t.message}")
+                alertDialog.setMessage("Request failed: ${t.message}")
             }
         })
 
     }
 
+     private fun showAlert() {
+        alertDialog.setTitle("Sikka Pranali")
+        alertDialog.setMessage("Verifying your details...")
+        alertDialog.setCancelable(false)
+         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok") { _, _ ->
+             finish()
+             alertDialog.dismiss()
+         }
+        alertDialog.show()
+        buyProduct()
+    }
 }
