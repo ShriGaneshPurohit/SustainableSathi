@@ -13,10 +13,14 @@
 
     <!-- Sell E-Waste -->
     <string-array name="eWaste_category">
-        <item>Category 1</item>
-        <item>Category 2</item>
-        <item>Category 3</item>
-        <item>Category 4</item>
+        <item>AC</item>
+        <item>Battery</item>
+        <item>Fan</item>
+        <item>Laptop</item>
+        <item>Mobile</item>
+        <item>Monitor</item>
+        <item>Refrigerator</item>
+        <item>Solar Panel</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
