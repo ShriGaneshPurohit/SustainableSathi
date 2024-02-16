@@ -20,7 +20,7 @@ class sikkaPranali() {
     private var priceAfterDep: Double = 0.0
     private var finalPrice: Double = 0.0
 
-    fun getPrice(dateOfPurchase: Date, mrp: Double, conditionOfDevice: Int): Double{
+    fun getPrice(dateOfPurchase: Date, mrp: Double, conditionOfDevice: Int, quantity: Int): Double{
 
         dop = dateOfPurchase
         basePrice = mrp
@@ -37,7 +37,7 @@ class sikkaPranali() {
                 finalPrice = basePrice * 5/100
         }
 
-        return finalPrice
+        return finalPrice * quantity
     }
 
     private fun getDepPrice() {

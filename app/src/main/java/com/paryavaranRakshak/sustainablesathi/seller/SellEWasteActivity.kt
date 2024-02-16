@@ -121,7 +121,7 @@ class SellEWasteActivity : AppCompatActivity() {
         }
 
         val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
-        finalPrice = sikkaPranali.getPrice(dateFormat.parse(selectedDate)!!,mrp,conditionSelected)
+        finalPrice = sikkaPranali.getPrice(dateFormat.parse(selectedDate)!!,mrp,conditionSelected,quantity)
         showAlert(finalPrice.toString())
 
     }
