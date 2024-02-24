@@ -29,6 +29,8 @@ class sikkaPranali() {
         getDepPrice()
 
         when (condition){
+            0->
+                finalPrice = priceAfterDep
             1->
                 finalPrice = priceAfterDep - (priceAfterDep * 10/100)
             2->

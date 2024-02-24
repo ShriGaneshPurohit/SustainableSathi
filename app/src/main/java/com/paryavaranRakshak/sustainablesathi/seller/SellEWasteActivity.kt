@@ -95,6 +95,8 @@ class SellEWasteActivity : AppCompatActivity() {
 
         binding.btnSell.setOnClickListener { getPrice() }
 
+        binding.btnBack.setOnClickListener { finish() }
+
     }
 
     private fun getPrice() {

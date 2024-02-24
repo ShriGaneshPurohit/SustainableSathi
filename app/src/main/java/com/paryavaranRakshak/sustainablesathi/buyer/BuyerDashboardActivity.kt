@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.paryavaranRakshak.sustainablesathi.SplashScreen
 import com.paryavaranRakshak.sustainablesathi.databinding.ActivityBuyerDashboardBinding
 import com.paryavaranRakshak.sustainablesathi.other.LoginSharedPreferenceHelper
+import com.paryavaranRakshak.sustainablesathi.seller.RedeemSikkaActivity
 
 class BuyerDashboardActivity : AppCompatActivity() {
 
@@ -31,6 +32,8 @@ class BuyerDashboardActivity : AppCompatActivity() {
 
         val adapter = ViewPagerAdapter(this)
         binding.viewpager2.adapter = adapter
+
+        binding.ivSikka.setOnClickListener { startActivity(Intent(this, BuySikkaActivity::class.java)) }
 
         TabLayoutMediator(binding.tabLayout, binding.viewpager2) { tab, position ->
             tab.text = when (position) {

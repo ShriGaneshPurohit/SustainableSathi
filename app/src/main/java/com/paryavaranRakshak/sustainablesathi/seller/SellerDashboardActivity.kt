@@ -44,6 +44,8 @@ class SellerDashboardActivity : AppCompatActivity() {
         //logout
         //binding.ivLogo.setOnClickListener { exit() }
 
+        binding.ivSikka.setOnClickListener { startActivity(Intent(this,RedeemSikkaActivity::class.java)) }
+
         replaceFragment(HomeFragment())
 
         binding.bottomNavigationView.setOnItemSelectedListener {

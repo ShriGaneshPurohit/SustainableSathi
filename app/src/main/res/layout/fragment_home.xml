@@ -205,6 +205,50 @@
                 tools:layout_editor_absoluteX="6dp"
                 android:layout_marginTop="@dimen/_5sdp"/>
 
+
+            <TextView
+                android:id="@+id/developer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developer's"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <ImageView
+                android:id="@+id/manav"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/manav"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/developer"/>
+
+            <ImageView
+                android:id="@+id/shriganesh"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/shri_img"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintStart_toEndOf="@+id/manav"
+                app:layout_constraintTop_toBottomOf="@+id/developer" />
+
+            <ImageView
+                android:id="@+id/mohit"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/mohit"
+                android:layout_marginStart="@dimen/_20sdp"
+                app:layout_constraintStart_toEndOf="@+id/shriganesh"
+                app:layout_constraintTop_toBottomOf="@+id/developer" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
