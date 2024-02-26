@@ -91,7 +91,7 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_4sdp"
-        android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
+        android:text="Sikka serves as the credit point system, facilitating transactions within our e-waste management platform. Buyers can utilize Sikka to purchase e-waste products while sellers can earn Sikka by selling their e-waste items, creating a seamless exchange process that promotes sustainability and environmental consciousness."
         android:textSize="@dimen/_13ssp"/>
 
     <TextView
