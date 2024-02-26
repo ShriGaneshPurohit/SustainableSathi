@@ -68,4 +68,16 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 
+    <string-array name="state">
+        <item>Maharashtra</item>
+    </string-array>
+
+
+    <string-array name="city">
+        <item>Ichalkaranji</item>
+        <item>Sangli</item>
+        <item>Karad</item>
+        <item>Kolhapur</item>
+    </string-array>
+
 </resources>

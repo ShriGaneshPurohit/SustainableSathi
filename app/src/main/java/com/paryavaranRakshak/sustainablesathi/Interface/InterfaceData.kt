@@ -6,6 +6,8 @@ import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
 import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
 import com.paryavaranRakshak.sustainablesathi.credits
+import com.paryavaranRakshak.sustainablesathi.locationmod
+import com.paryavaranRakshak.sustainablesathi.result
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -96,5 +98,8 @@ interface InterfaceData {
     fun buyerCredits(
         @Query("buyer_uid") buyerUid: String
     ): Call<credits>
+
+    @GET("locationList.php") // Replace with your actual API endpoint
+    fun getLocationMod(@Query("city") city: String): Call<result>
 
 }

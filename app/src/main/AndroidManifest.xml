@@ -19,6 +19,9 @@
         android:theme="@style/Theme.SustainableSathi"
         tools:targetApi="31">
         <activity
+            android:name=".MuicipalCoopActivity"
+            android:exported="false" />
+        <activity
             android:name=".seller.RedeemSikkaActivity"
             android:exported="false" />
         <activity

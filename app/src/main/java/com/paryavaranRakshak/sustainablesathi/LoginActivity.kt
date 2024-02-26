@@ -67,6 +67,8 @@ class LoginActivity : AppCompatActivity() {
         //btn google
         binding.btnGoogle.setOnClickListener { signInGoogle() }
 
+        binding.btnMunicipalCoop.setOnClickListener { startActivity(Intent(this,MuicipalCoopActivity::class.java)) }
+
     }
 
     private fun signInGoogle() {
