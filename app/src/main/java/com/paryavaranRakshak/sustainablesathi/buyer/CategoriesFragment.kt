@@ -20,7 +20,7 @@ class CategoriesFragment : Fragment() {
     ): View {
         binding = FragmentCatagoriesBinding.inflate(layoutInflater)
 
-        binding.cvAc.setOnClickListener{ getCategory("AC") }
+       /* binding.cvAc.setOnClickListener{ getCategory("AC") }
 
         binding.cvMobile.setOnClickListener { getCategory("Mobile") }
 
@@ -34,7 +34,7 @@ class CategoriesFragment : Fragment() {
 
         binding.cvRefrigerator.setOnClickListener { getCategory("Refrigerator") }
 
-        binding.cvSolarPanel.setOnClickListener { getCategory("Solar Panel") }
+        binding.cvSolarPanel.setOnClickListener { getCategory("Solar Panel") }*/
 
         return binding.root
     }

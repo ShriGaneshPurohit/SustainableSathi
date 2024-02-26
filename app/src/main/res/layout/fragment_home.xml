@@ -233,7 +233,7 @@
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="12dp"
-                android:src="@drawable/shri_img"
+                android:src="@drawable/ic_priyanshu"
                 android:layout_marginStart="@dimen/_20sdp"
                 app:layout_constraintStart_toEndOf="@+id/manav"
                 app:layout_constraintTop_toBottomOf="@+id/developer" />

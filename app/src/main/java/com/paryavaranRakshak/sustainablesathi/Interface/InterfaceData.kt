@@ -5,6 +5,7 @@ import com.paryavaranRakshak.sustainablesathi.buyer.models.CategoryProductsModel
 import com.paryavaranRakshak.sustainablesathi.seller.models.LocatorFacilityModel
 import com.paryavaranRakshak.sustainablesathi.models.LoginModel
 import com.paryavaranRakshak.sustainablesathi.buyer.models.ProductsModel
+import com.paryavaranRakshak.sustainablesathi.credits
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -85,5 +86,15 @@ interface InterfaceData {
         @Query("buyer_uid") buyerUid: String,
         @Query("product_id") productId: String
     ): Call<BuyProductModel>
+
+    @GET("available-credits.php")
+    fun sellerCredits(
+        @Query("seller_uid") sellerUid: String
+    ): Call<credits>
+
+    @GET("available-credits.php")
+    fun buyerCredits(
+        @Query("buyer_uid") buyerUid: String
+    ): Call<credits>
 
 }

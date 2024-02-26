@@ -31,19 +31,6 @@ class SellerDashboardActivity : AppCompatActivity() {
 
         loginHelper = LoginSharedPreferenceHelper(this)
 
-        //E - Waste Facility Locator
-        //binding.cvEWasteLocator.setOnClickListener{ startActivity(Intent(this,
-          //  FacilityLocatorActivity::class.java)) }
-
-        // Sell E - Waste
-        //binding.cvSellEWaste.setOnClickListener{ startActivity(Intent(this, SellEWasteActivity::class.java)) }
-
-        //Knowledge Hub
-        //binding.cvKnowledgeHub.setOnClickListener{ startActivity(Intent(this, KnowledgeHubActivity::class.java)) }
-
-        //logout
-        //binding.ivLogo.setOnClickListener { exit() }
-
         binding.ivSikka.setOnClickListener { startActivity(Intent(this,RedeemSikkaActivity::class.java)) }
 
         replaceFragment(HomeFragment())
