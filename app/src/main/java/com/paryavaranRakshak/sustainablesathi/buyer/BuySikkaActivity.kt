@@ -21,22 +21,5 @@ class BuySikkaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        auth = FirebaseAuth.getInstance()
-        val currentUser = auth.currentUser
-
-        if (currentUser != null) {
-            val profilePicUrl = currentUser.photoUrl
-
-            // Using Glide to load the profile picture and apply the CircleCrop transformation
-            Glide.with(this)
-                .load(profilePicUrl)
-                .transform(CircleCrop())
-                //.placeholder(R.drawable.ic_guest) // Placeholder image while loading
-                //.error(R.drawable.ic_guest) // Image to display in case of error
-                .into(binding.ivProfile)
-
-            binding.tvUsername.text = currentUser.displayName
-        }
-
     }
 }
