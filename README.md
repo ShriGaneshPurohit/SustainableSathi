@@ -5,7 +5,7 @@ Welcome to our comprehensive E-Waste management solution! This README file provi
 ## Features
 
 ### 1. E-Waste Facility Locator
-Our website uses longitude and latitude coordinates to assist users in finding the nearest e-waste collection facilities based on their location.
+Our app uses longitude and latitude coordinates to assist users in finding the nearest e-waste collection facilities based on their location.
 
 ### 2. Gayaan Kosh
 This section provides essential information on e-waste management, emphasizing reuse, recycling, and the potential health impacts of improper disposal.
@@ -14,7 +14,7 @@ This section provides essential information on e-waste management, emphasizing r
 Sikka Pranali calculates credit points for users based on the quantity of precious metals recovered from correctly disposed e-waste. Users can convert these credit points into Indian Rupees (INR).
 
 ### 4. Legal Compliance
-Our website features government regulations and policies related to e-waste management to promote adherence to legal standards.
+Our app features government regulations and policies related to e-waste management to promote adherence to legal standards.
 
 ### 5. Data Analysis
 Government authorities can access, analyze, and record data related to e-waste management through our website.
@@ -47,7 +47,7 @@ A dedicated dashboard for domestic waste collectors where they can add an e-wast
    ```
    
 2. Run the application:
-   - Launch app using Android Studio for the mobile components.
+   - Launch the app using Android Studio for the mobile components.
 
 3. To See Data Analysis:
    - Go to [Sustainable-Sathi](https://sustainable-sathi.tech/) website.
