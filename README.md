@@ -52,6 +52,11 @@ A dedicated dashboard for domestic waste collectors where they can add an e-wast
 3. To See Data Analysis:
    - Go to [Sustainable-Sathi](https://sustainable-sathi.tech/) website.
 
+## Demo Video Links:
+   - Seller Dashboard:- [https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Seller%20Dashboard.mp4](https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Seller%20Dashboard.mp4)
+   - Municipal coopration driver:- [https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Municipal%20coopration%20driver.mp4](https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Municipal%20coopration%20driver.mp4)
+   - Buyer Dashboard:- [https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Buyer%20Dashboard.mp4](https://github.com/ShreeGaneshPurohit/SustainableSathi/blob/main/Buyer%20Dashboard.mp4)
+
 ## Contact
 
 For any inquiries or feedback, please contact us at [Manav Patni - developer.mnvpatni@gamil.com](mailto:developer.mnvpatni@gamil.com).
