@@ -59,6 +59,7 @@ A dedicated dashboard for domestic waste collectors where they can add an e-wast
 
 ## Contact
 
-For any inquiries or feedback, please contact us at [Manav Patni - developer.mnvpatni@gamil.com](mailto:developer.mnvpatni@gamil.com) [ShriGanesh Purohit - developer.sgpurohit@gamil.com](mailto:developer.sgpurohit@gamil.com).
+For any inquiries or feedback, please contact us at [Manav Patni - developer.mnvpatni@gamil.com](mailto:developer.mnvpatni@gamil.com)
+[ShriGanesh Purohit - developer.sgpurohit@gamil.com](mailto:developer.sgpurohit@gamil.com).
 
 Happy coding!
